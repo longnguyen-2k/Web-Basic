@@ -1,0 +1,49 @@
+.modal-content{
+    background-color:#f9faf9;
+}  
+   .modal-body textarea{
+    width:80%;
+    height:70%;
+    margin-left: 50px;
+    margin-top: 8px;
+    border: 1px solid #DFDFDF;
+   }
+   .modal-body button{
+    width:15%;
+    height:70%;
+   background-color: #016d3b;
+   }
+
+   .modal-footer button {
+       background-color:	#DCDCDC;
+       width: 10%;
+       height: 70%;
+   }
+   .modal-body input{
+    margin-top: 15px;
+
+   }
+   .include{
+       display:inline-flex;
+       margin: 5px 5px 5px 5px;
+   }
+   .close:hover{
+    background-color:red;
+   }
+   .d-inline-block{
+      margin-left: 5px;
+   }
+   .modal-footer button{
+    border-radius: 10px;
+   }
+   .modal-footer button:hover{
+       background-color: #016d3b;
+   }
+   #topic{
+      width:20%;
+      height: 10%;
+      margin-left: 65%;
+      margin-top: 10px;
+      margin-bottom: 5px;
+   }
+  

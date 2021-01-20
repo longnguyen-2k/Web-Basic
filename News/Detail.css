@@ -1,0 +1,31 @@
+
+.content{
+    margin: auto;
+    width: 70%;
+}
+.image img{
+    width:100%;
+    height:50%;
+   margin-left: 25px;
+}
+.title p{
+    text-align: left;
+    font-weight: 500;
+    font-size:25px;
+    color:#00CED1;
+}
+.container mt-3{
+      margin:auto;
+}
+.topics{
+   margin: 0px 0px 0px 20px;
+}
+.Title{
+    margin: 0px 0px 0px 20px;
+ }
+.Cap{
+    margin: 0px 0px 0px 20px;
+ }
+ .Cap p{
+    font-size:20px;
+ }

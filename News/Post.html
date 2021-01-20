@@ -1,0 +1,62 @@
+<html>
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Post.css">
+    </head>
+    <body>
+
+        <div id="layoutSidenav_content">
+            <div class="Post">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class=" fas fa-plus  fa-1x mr-2"></i>Đăng bài
+                </button>
+                    <tbody class="text-center" id="product-admin">
+                        <script src="Post.js"></script>
+                    </tbody>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Đăng bài</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">s
+                                <span  aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                                <textarea rows="1" cols="20" class ="form-control" id ="mytextare1" placeholder="Tiêu đề"></textarea>
+                                          <select name="Chọn chủ đề" id="topic">
+                                            <option disabled selected hidden >Chọn chủ đề</option>
+                                            <option value="Cuocsong">Cuộc sống</option>
+                                            <option value="Tinhyeu">Tình yêu</option>
+                                            <option value="Thoitrang">Thời trang</option>
+                                            <option value="Congnghe">Công nghệ</option>
+                                            <option value="Sach">Sách</option>
+                                          </select>
+                                <textarea rows="3" cols="20" class ="form-control"id="mytextare2"placeholder="Cập nhật bài viết của bạn"></textarea>
+                                <div class ="d-inline-block">
+                                    <i class="fas fa-images fa-2x" style="color:#016d3b"></i>
+                                     <input type="file" id="image">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button"onclick="myPost()">Đăng</button>
+                        </div>
+                    </div>
+                </div>
+                <script src="Post.js"></script>
+            </div>
+
+    </body>
+</html>
