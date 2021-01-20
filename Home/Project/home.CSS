@@ -1,0 +1,126 @@
+.monitor {
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    height: 4.2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.silogan {
+    height: 100%;
+    width: 50%;
+    font-size: 2.5em;
+}
+
+.silogan a {
+    text-decoration: none;
+    color: #016d3b;
+    display: block;
+    text-align: center;
+}
+
+.logo {
+    margin: auto;
+    width: 16.66%;
+    height: 100%;
+}
+
+.logo a>img {
+    margin-left: 3em;
+    margin-top: 1em;
+}
+
+.form-inline {
+    margin: auto;
+    width: 33.34%;
+    height: 40px;
+    display: flex;
+    padding-right: 2em;
+}
+
+.form-control {
+    width: 70%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.btn {
+    border-radius: 5%;
+}
+
+.menu {
+    width: 100%;
+    height: 3em;
+    background: #016d3b;
+    color: #f9faf9;
+}
+
+.menu ul li a {
+    color: #f9faf9;
+    line-height: 2em;
+}
+
+#login {
+    background: #016d3b;
+    color: #f9faf9;
+    border: 1px solid #f9faf9;
+    border-radius: 1em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+}
+
+.fa-bars {
+    color: #f9faf9;
+    margin-top: 0.25em;
+}
+
+.content {
+    padding-top: 5px;
+    margin: auto;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.content a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content h1 a {
+    text-decoration: none;
+    color: #016d3b;
+}
+
+h1 {
+    padding-top: 2em;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.moi_nhat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    color: #f9faf9;
+    width: 100%;
+    height: 12em;
+    background: #333;
+}
+
+.col-md-4 {
+    margin-left: 1em;
+}
