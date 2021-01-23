@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ đề</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="TrangChuDe.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="./bootstrap/css/bootstrap.min.css"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div class="monitor">
+
+        <header class="header">
+            <div class="logo">
+                <img src="Image/Logo.jpg" width="50px" />
+            </div>
+            <div class="silogan">
+                <B>
+                    <p>Real Man Đàn Ông Đích Thực</p>
+                </B>
+            </div>
+            <form class="form-inline ">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" value="Tìm"><i class="fas fa-search"></i></button>
+            </form>
+        </header>
+        <div class="menu">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.HTML">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cuộc sống</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tình yêu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Thời trang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Công Nghệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sách</a>
+                </li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bars fa-x"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button" id="button-dropdown-item" data-toggle="modal" data-target=".login-register-form">Đăng nhập</button>
+                        <div class="br"><br></div>
+                        <div class="menu-nav">
+                            <a class="dropdown-item" href="#">Cuộc sống</a>
+                            <a class="dropdown-item" href="#">Tình yêu</a>
+                            <a class="dropdown-item" href="#">Thời trang</a>
+                            <a class="dropdown-item" href="#">Công nghệ</a>
+                            <a class="dropdown-item" href="#">Sách</a>
+                        </div>
+                        <div class="br"><br></div>
+                        <a class="dropdown-item" href="#">Cài đặt</a>
+                        <a class="dropdown-item" href="#">Hỗ trợ</a>
+                        <div class="br"><br></div>
+                        <button class="dropdown-item" id="button-dropdown-item" type="button">Đăng xuất</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="modal fade login-register-form" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" style="margin-top: 4px; margin-left: 88%;">&times;</button>
+                        <div class="modal-header">
+                            
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#login-form"> Đăng nhập <span
+                                            class="glyphicon glyphicon-user"></span></a></li>
+                                <li><a data-toggle="tab" href="#registration-form"> Đăng ký <span
+                                            class="glyphicon glyphicon-pencil"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <div id="login-form" class="tab-pane fade in active">
+                                    <form action="/">
+                                        <div class="form-group">
+                                            <label for="username" style="color: #016d3b ;">Tên người dùng:</label>
+                                            <input type="username" class="form-control" id="email"
+                                                placeholder="Tên người dùng" name="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd" style="color: #016d3b ;" >Mật khẩu:</label>
+                                            <input type="password" class="form-control" id="pwd"
+                                                placeholder="Nhập mật khẩu" name="pwd">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label style="color: #016d3b ;"><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-default"
+                                            style="background-color:  #016d3b; color: white;">Đăng nhập</button>
+                                    </form>
+                                </div>
+                                <div id="registration-form" class="tab-pane fade">
+                                    <form action="/">
+                                        <div class="form-group">
+                                            <label for="username" style="color: #016d3b ;">Tên đăng nhập:</label>
+                                            <input type="text" class="form-control" id="name"
+                                                placeholder="Tên đăng nhập" name="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newemail" style="color: #016d3b ;">Email:</label>
+                                            <input type="email" class="form-control" id="newemail"
+                                                placeholder="Đại chỉ email" name="newemail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newpwd" style="color: #016d3b ;">Mật khẩu:</label>
+                                            <input type="password" class="form-control" id="newpwd"
+                                                placeholder="Mật khẩu" name="newpwd">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwdd" style="color: #016d3b ;">Xác nhận mật khẩu:</label>
+                                            <input type="password" class="form-control" id="pwdd"
+                                                placeholder="Xác nhận mật khẩu" name="pwdd">
+                                        </div>
+                                        <button type="submit" class="btn btn-default"
+                                            style="background-color:  #016d3b; color: white;">Đăng ký</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- SONG -->
+<div class="content">
+    <div class="song">
+        <h1><a href="#">Cuộc Sống</a></h1>
+        <h3><a href="#">Quan Tâm Nhất</a></h3>
+        <div class="song_main-img">
+            <figure><img src="https://www.wallpapers4u.org/wp-content/uploads/football_players_ball_men_form_2800_1920x1080.jpg"
+            class="d-block w-100" alt="..." style="width: 80%; height: 70%;"></figure>
+        </div>
+        <h5><br>
+            Nhận tin tức, hình ảnh và video mới nhất về các cầu thủ bóng đá, bóng, <br>
+            đàn ông và tìm hiểu tất cả về các cầu thủ bóng đá, trái bóng, đàn ông từ
+        </h5> <br><br>
+        <div class="content_card">
+            <div class="card" style="width: 15rem;">
+                <figure> <img class="card-img-top"
+                    src="https://ggstorage.oxii.vn/images/oxii-2021-1-19/728x436/day-la-cach-de-anh-em-khong-con-suy-nghi-tieu-cuc-va-tien-len-phia-truoc-anh-3.png"
+                    alt=""></figure>
+                <div class="card-body">
+                    <p class="card-text">Đây là cách để anh em không suy nghĩ tiêu cực và tiến lên phía trước</p>
+                </div>
+            </div>
+            <div class="card" style="width: 15rem;">
+                <figure><img class="card-img-top"
+                    src="https://ggstorage.oxii.vn/images/oxii-2019-10-8/728x436/tho-nhung-that.png"
+                    alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">20 điều thô nhưng thật về cuộc sống đàn ông nên biết</p>
+                </div>
+            </div>
+            <div class="card" style="width: 15rem;">
+                <figure><img class="card-img-top" src="https://cdn.vnlife.org/master/uploads/2021/01/12203626/7-thu-phu-nu-tran-trong-o-mot-nguoi-dan-ong-hon-la-ngoai-hinh-2021-01-12-133625-390x260.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">7 thứ khiến anh em 'yếu đuối' và bớt nam tính</p>
+                </div>
+            </div>
+            <div class="card" style="width: 15rem;">
+                <figure><img class="card-img-top" src="https://cdn.vnlife.org/master/uploads/2021/01/11222434/tai-sao-cuoc-song-qua-kho-khan-chi-2-cach-giup-anh-em-vuot-qua-2021-01-11-152434-390x260.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">Nói không với stress Reset tâm trạng với 5 phút </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mới nhất -->
+    <div class="song">
+        <p></p>
+        <h3><a href="#">Mới Nhất</a></h3>
+        <div class="song_main-img">
+            <figure><img class="card-img-top" src="https://storage.oxii.vn/Cache/Sites/OXII/Storage/Images/2019/2/15/1920/f19b969c-dau-hieu-cho-thay-mot-ga-trai-20-chin-chan-hon-tuoi-that-cua-minh-1_779_467_566.png" alt="Card image cap"></figure>
+        </div>
+        <h5><br>
+            21 dấu hiệu nhận biết một người đàn ông trưởng thành
+        </h5> <br>
+        <h6>
+            Anh em hãy đọc những dấu hiệu nhận biết một người đàn ông trưởng thành dưới đây để hiểu rõ bản thân hơn.
+        </h6>
+        <br><br>
+
+        <div class="content_card">
+            <div class="card" style="width: 33rem;">
+                <figure> <img class="card-img-top" src="https://storage.oxii.vn/Cache/Sites/OXII/Storage/Images/2021/1/18/1920/5-thu-anh-em-ngung-theo-duoi-khi-nhan-ra-gia-tri-cua-ban-than-4_1920_1152_524.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">Năm thứ anh em ngừng theo đuổi khi nhận ra giá trị của bản thân</p>
+                </div>
+            </div>
+            <div class="card" style="width: 33rem;">
+                <figure><img class="card-img-top" src="https://ggstorage.oxii.vn/images/oxii-2021-1-19/728x436/hay-hoi-ban-than-7-cau-hoi-de-thay-doi-hoan-toan-cuoc-doi-1_1920_1152_786.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">Hãy hỏi bản thân 7 câu hỏi để thay đổi hoàn toàn cuộc đời </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_card">
+            <div class="card" style="width: 33rem;">
+                <figure><img class="card-img-top" src="https://i.doanhnhansaigon.vn/2018/05/22/appneu-1526956192_750x0.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">Người thành công quyết định những việc nhỏ nhặt khác chúng ta như thế nào? </p>
+                </div>
+            </div>
+            <div class="card" style="width: 33rem;">
+                <figure><img class="card-img-top" src="https://i.doanhnhansaigon.vn/2018/09/22/nguoithanhcong-1537609319_750x0.jpg" alt="Card image cap"></figure>
+                <div class="card-body">
+                    <p class="card-text">10 phẩm chất quan trọng nhất cần cho người muốn làm nên nghiệp lớn  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nút xem thêm -->
+        <button aria-expanded="false"  class="btn btn-outline-danger" style="width: 100%; margin-top: 50px;"
+            data-toggle="collapse" data-target="#anNoiDung">Xem thêm
+        </button>
+        <div class="collapse mt-6" id="anNoiDung" style="margin-top: 30px;">
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <figure> <img class="card-img-top" src="https://cafebiz.cafebizcdn.vn/thumb_w/600/2019/10/1/dan-ong-1569919675883571662252-crop-15699196852941179526362.png" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">Sự khác biệt giữa đàn ông có bản lĩnh và đàn ông không có bản lĩnh</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top" src="https://icdn.dantri.com.vn/thumb_w/640/2020/07/22/bezoz-1595385760860.jpeg" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">Tài sản người giàu nhất hành tinh tăng kỷ lục 13 tỷ USD chỉ trong 1 ngày</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top" src="https://kenh14cdn.com/thumb_w/620/2016/anh2-1479644257779.jpg" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">Nếu bạn đang cảm thấy chán chường, hãy nghe người đàn ông sắp chết này nói về ý nghĩa cuộc sống </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top" src="https://ggstorage.oxii.vn/images/oxii-2019-2-15/728x436/shutterstock-721883890_976_586_371.png" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">6 cách trở thành người đàn ông thú vị hơn trong mắt phụ nữ</p>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <figure> <img class="card-img-top"
+                        src="https://www.mindalife.vn/wp-content/uploads/2020/05/bi-quyet-thanh-cong-6.jpg"
+                        alt=""></figure>
+                    <div class="card-body">
+                        <p class="card-text">Những bí quyết thành công trong cuộc sống và công việc</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top"
+                        src="http://trumtrada.com/wp-content/uploads/2020/07/conor.jpg.webp"
+                        alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">Bạn có thất vọng về cuộc sống?</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top" src="https://ggstorage.oxii.vn/images/oxii-2019-3-25/728x436/9-kho-khan-dien-hinh-trong-cuoc-song-cua-mot-nguoi-dan-ong-va-cach-vuot-qua-1.jpg" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">9 khó khăn điển hình trong cuộc sống của một người đàn ông và cách vượt qua</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <figure><img class="card-img-top" src="https://www.elleman.vn/wp-content/uploads/2018/07/22/%C4%91%C3%A0n-%C3%B4ng-tu%E1%BB%95i-30-elle-man-2.jpg" alt="Card image cap"></figure>
+                    <div class="card-body">
+                        <p class="card-text">Đàn ông tuổi 30 và 10 câu hỏi lớn cần trả lời</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-sm">
+            <tr>
+                <td><a class="nav-link" href="index.HTML">Trang chủ</a></td>
+                <td><a class="nav-link " href="#">Thời trang</a></td>
+            </tr>
+            <tr>
+                <td><a class="nav-link " href="#">Cuộc sống</a></td>
+                <td><a class="nav-link " href="#">Công nghệ</a></td>
+            </tr>
+            <tr>
+                <td><a class="nav-link " href="#">Tình yêu</a></td>
+                <td><a class="nav-link " href="#">Sách</a></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4 col-xs-2  col-lg-4 footer-about wow fadeInUp animated"
+            style="visibility: visible; animation-name: fadeInUp;">
+            <img class="logo-footer" src="Image/Logo2.jpg" alt="logo-footer" data-at2x="Image/Logo2.jpg" width="60px">
+            <p class="content-footer">
+                Cộng đồng những người đàn ông có cùng khao khát muốn trở thành phiên bản tốt nhất của bản thân, cung cấp
+                kiến thức và cùng chia sẽ trên nhiều lĩnh vực.</p>
+
+        </div>
+        <div class="col-md-4 col-xs-2 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated"
+            style="visibility: visible; animation-name: fadeInDown;">
+
+            <h3>Liên lạc</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+            <p><i class="fas fa-phone"></i> (+84) 829 970 447 </p>
+            <p><i class="fas fa-envelope"></i> <a
+                    href="mailto:tuan.nguyenit263@gmail.com">tuan.nguyenit263@gmail.com</a></p>
+        </div>
+        <div class="col-md-3 col-xs-2 col-xs-2 col-lg-2 footer-social wow fadeInUp animated"
+            style="visibility: visible; animation-name: fadeInUp;">
+            <h3>Theo dõi</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook "></i></a>
+                <a href="#"><i class="fab fa-google-plus-g "></i></a>
+                <a href="#"><i class="fab fa-instagram "></i></a>
+                <a href="#"><i class="fab fa-pinterest "></i></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+        <!-- <div>
+            <p></p>
+            <h3><a href="#">TÌNH YÊU</a></h3>
+
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://vnreview.vn/image/16/11/94/1611949.jpg?t=1483375813773"
+                        alt="">
+                    <div class="card-body">
+                        <p class="card-text">Nhiên cựu mới: Đàn ông IQ cao có xu hướng chung thủy hơn
+                        </p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://storage.oxii.vn/Cache/Sites/OXII/Storage/Images/2019/1/27/1200x628/biker-25.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Đàn ông có thể yêu xe moto hơn yêu phái đẹp <br></p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://thamtutoantam.vn/sites/default/files/dau-hieu-con-gai-yeu-that-long.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Làm thế nào để nhận ra một cô gái yêu bạn thật lòng? 20 dấu hiệu</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                    
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFh8wBIQex0lGZmNtiyq7pkVOFZS3zfNr_qQ&usqp=CAU" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"> Liệu có tình yêu sét đánh thật không, khoa học đã có câu trả lời!</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                
+            </div>      
+        </div> -->
+
+        <!-- <div>
+            <p></p>
+            <h3><a href="#">THỜI TRANG</a></h3>
+
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://i.pinimg.com/originals/5b/dd/0f/5bdd0f9c2095918d78eac2be29fbbb6b.jpg"
+                        alt="">
+                    <div class="card-body">
+                        <p class="card-text">11 lời khuyên nhanh về thời trang cho nam giới
+                        </p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://i.pinimg.com/originals/07/89/43/07894323a43f78a7920f29dd2d2f1c4a.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Những món đồ thời trang nam không bao giờ lỗi mốt <br></p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://2cafe.vn/wp-content/uploads/2018/05/053018_0258_6likhuynv1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">6 lời khuyên về cách ăn mặc với người nam gầy</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                    
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://anh.24h.com.vn/upload/2-2016/images/2016-04-21/1461230922-1461227208-335117d900000578-3547280-image-a-91_1461057343043.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"> Mãn nhãn với 13 quý ông sành điệu nhất thế giới</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                
+            </div>      
+        </div> -->
+
+        <!-- <div>
+            <p></p>
+            <h3><a href="#">CÔNG NGHỆ</a></h3>
+
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://static.yeah1.com/uploads/editors/27/2020/05/26/5d9hKdK756o9nLC7I7vNMGloejjP0MLHQILJvvCa.png"
+                        alt="">
+                    <div class="card-body">
+                        <p class="card-text">Cuộc sống của chàng trai thắng 23 
+                            tỷ tại Ai là triệu phú, dùng sự trợ giúp chỉ để báo tin mừng cho bố bây giờ ra sao ?
+                        </p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://www.thongtincongnghe.com/sites/default/files/imagecache/xw640/images/2012/1/25/img-1327504694-1.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Những chàng trai sống nhờ… laptop <br></p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://cly.onecmscdn.com/2017/05/20/congly-vn_cong-nghe-copy.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Công nghệ đã thay đổi cuộc sống con người như thế nào?</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                    
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://anh.24h.com.vn/upload/2-2016/images/2016-04-21/1461230922-1461227208-335117d900000578-3547280-image-a-91_1461057343043.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"> Mãn nhãn với 13 quý ông sành điệu nhất thế giới</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                
+            </div>      
+        </div> -->
+
+        <!-- <div>
+            <p></p>
+            <h3><a href="#">SÁCH</a></h3>
+
+            <div class="content_card">
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://www.elleman.vn/wp-content/uploads/2018/07/22/Nhu%CC%9B%CC%83ng-cuo%CC%82%CC%81n-sa%CC%81ch-hay-ne%CC%82n-%C4%91o%CC%A3c-da%CC%80nh-cho-nam-gio%CC%9B%CC%81i-thumbnail-elleman.jpeg"
+                        alt="">
+                    <div class="card-body">
+                        <p class="card-text">18 cuốn sách hay khuyến khích nam giới nên một lần đọc qua
+                        </p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top"
+                        src="https://ggstorage.oxii.vn/images/oxii-2019-4-30/728x436/5ac68fc9c407b32e008b4806_1200_720_283.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Nam giới học cách ứng xử cơ bản với Đắc nhân tâm trong 5 phút <br></p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://downloadsach.com/wp-content/uploads/2018/02/sach-hay-ve-dan-ong-660x330.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">10 quyển sách hay về đàn ông nên đọc</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                    
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="https://www.elleman.vn/wp-content/uploads/2017/08/14/gioi-thieu-sach-hay-featured-image-elle-man.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"> Giới thiệu sách hay trong tháng dành cho nam giới: ELLE Man Pick</p>
+                        <i class="fa fa-heart-o"></i>
+                        <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                    </div>
+                </div>
+                
+            </div>      
+        </div> -->
+          
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#noi-dung-collapse">Xem thêm</button>
+                <div class="collapse" id="noi-dung-collapse">
+                    <div>
+                        <p></p>
+                        <h3><a href="#">SÁCH</a></h3>
+            
+                        <div class="content_card">
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top"
+                                    src="https://www.elleman.vn/wp-content/uploads/2018/07/22/Nhu%CC%9B%CC%83ng-cuo%CC%82%CC%81n-sa%CC%81ch-hay-ne%CC%82n-%C4%91o%CC%A3c-da%CC%80nh-cho-nam-gio%CC%9B%CC%81i-thumbnail-elleman.jpeg"
+                                    alt="">
+                                <div class="card-body">
+                                    <p class="card-text">18 cuốn sách hay khuyến khích nam giới nên một lần đọc qua
+                                    </p>
+                                    <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top"
+                                    src="https://ggstorage.oxii.vn/images/oxii-2019-4-30/728x436/5ac68fc9c407b32e008b4806_1200_720_283.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Nam giới học cách ứng xử cơ bản với Đắc nhân tâm trong 5 phút <br></p>
+                                    <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="https://downloadsach.com/wp-content/uploads/2018/02/sach-hay-ve-dan-ong-660x330.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">10 quyển sách hay về đàn ông nên đọc</p>
+                                    <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="https://www.elleman.vn/wp-content/uploads/2017/08/14/gioi-thieu-sach-hay-featured-image-elle-man.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text"> Giới thiệu sách hay trong tháng dành cho nam giới: ELLE Man Pick</p>
+                                    <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-comments-o" aria-hidden="true" style="margin-left: 20px;"></i>
+                                </div>
+                            </div>
+                            
+                        </div>  
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+</body>
+
+</html>
