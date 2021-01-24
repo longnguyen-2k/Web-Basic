@@ -40,10 +40,15 @@
     padding-right: 2em;
 }
 
-.form-control {
+#form-control {
     width: 70%;
     height: 100%;
     border-radius: 5%;
+}
+
+.fa-search {
+    font-size: 1.6em;
+    color: #016d3b;
 }
 
 
@@ -133,6 +138,80 @@
 
 .menu-nav {
     display: none;
+}
+
+
+/* Login and Logout */
+
+.modal-header .close {
+    padding: 20px 20px;
+}
+
+.modal-header ul {
+    border: none;
+}
+
+.modal-header ul li {
+    margin: 0;
+    text-align: center;
+}
+
+.modal-header ul li a {
+    border: none;
+    border-radius: 0;
+    color: rgb(175, 174, 174);
+}
+
+.modal-header ul li a:hover {
+    border: none;
+    color: #016d3b;
+}
+
+.modal-header ul li a span {
+    margin-right: 30px;
+}
+
+.modal-content {
+    margin-right: 5rem !important;
+    width: 24rem!important;
+}
+
+.nav-tabs {
+    justify-content: space-around;
+    width: 30rem !important;
+}
+
+.active-button a:hover {
+    text-decoration: none !important;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: #016d3b !important;
+}
+
+.checkbox label {
+    color: #016d3b !important;
+}
+
+.btn-default {
+    background-color: #016d3b !important;
+    color: white !important;
+}
+
+
+/* Modal input info */
+
+.btn-outline-danger {
+    border: #016d3b !important;
+    background: #016d3b !important;
+    color: #f9faf9 !important;
+}
+
+.modal-footer .btn-secondary {
+    background: #f9faf9 !important;
+    color: red !important;
+    border: red !important;
 }
 
 
@@ -250,13 +329,34 @@ figure:hover+span {
         width: 0;
         visibility: hidden;
     }
+    .form-inline {
+        width: 65%;
+        display: flex;
+        padding: 0;
+        margin-bottom: 1.2rem;
+    }
+    #form-control {
+        width: 70% !important;
+        height: 90% !important;
+        padding: 0;
+    }
+    .btn-outline-success {
+        color: #f9faf9 !important;
+        border-color: #f9faf9 !important;
+        height: 90% !important;
+        width: 30% !important;
+    }
+    .fa-search {
+        font-size: 1.2em;
+        color: #f9faf9;
+    }
     /* Menu */
     .menu {
         height: 2.5em;
     }
-    .menu ul li a {
-        line-height: 0.5em;
-        font-size: 0.2rem;
+    .nav-link {
+        line-height: 0.5em !important;
+        font-size: 0.2rem !important;
     }
     .nav-item {
         visibility: hidden;
@@ -279,23 +379,11 @@ figure:hover+span {
         height: 1px;
         background: #016d3b;
     }
-    .form-inline {
-        width: 65%;
-        display: flex;
-        padding: 0;
-        margin-bottom: 1.2rem;
-    }
+    /* Login */
     .form-control {
-        width: 70% !important;
-        height: 90% !important;
-        padding: 0;
+        width: 90% !important;
     }
-    .btn-outline-success {
-        color: #f9faf9 !important;
-        border-color: #f9faf9 !important;
-        height: 90% !important;
-        width: 30% !important;
-    }
+    /* Content */
     .content_card {
         margin-left: 2rem;
     }
@@ -356,7 +444,7 @@ figure:hover+span {
         display: flex;
         padding-right: 0;
     }
-    .form-control {
+    #form-control {
         width: 60%;
     }
     .menu {
