@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
+   
+        <link rel="stylesheet" href="index.css">  
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>					
+        <script src="table.js"></script>
+        <script src="Data.js"></script>
+        <script src="index.js" ></script> 
 </head>
 <body>
    <div class="container-fluid">
-    <header class="jumbotron shadow" >
+    <header class="jumbotron shadow fixed-top "  >
      
       <div  class="row">
         <div class="col-sm-2">
@@ -51,22 +56,23 @@
 
     </header>
     <div class="main">
-      <aside>
-        <div class="sidebar border-left shadow col-3 " id="aside_bar">
+      <aside class="col-2"></aside>
+
+      <aside >
+        <div class="sidebar border-left shadow  " id="aside_bar">
           <div class="user-panel">
             <div class="pull-left image">
               <img src="https://www.pinclipart.com/picdir/big/122-1221261_admin-svg-png-icon-free-download-325788-sunny.png" class="rounded-circle  " alt="User Image">
             </div>
-            <div class="pull-right info">
-              
-              <a href="#" style="font-size: xx-large;color: #016d3b;" id="admin_text">   Admin   </a>
+            <div class="pull-right info" style="font-size: xx-large;color: #016d3b;"   id="admin_text">             
+                Admin   
             </div>
           </div>
           <ul>
-            <li> <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active" > <i class="fa fa-th-large"></i> <span class="nav-label" id="dashboard_text"> Dashboards </span> <span class="fa fa-chevron-left pull-right" id="icon_chevron"></span> </a>
+            <li> <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active"  >  <i class="fa fa-th-large"></i> <span class="nav-label" id="dashboard_text"> Dashboards </span> <span class="fa fa-chevron-left pull-right" id="icon_chevron"></span> </a>
             <ul class="sub-menu collapse" id="dashboard">
-              <li class="active"><a href="#">CSS3 Animation</a></li>
-              <li><a href="#">General</a></li>
+              <li class="active"><a href="#" onclick="switch_table_user()">User-Panel</a></li>
+              <li><a href="#" onclick="switch_table_news()">News-Panel</a></li>
               
             </ul>
           </li>
@@ -80,17 +86,30 @@
         </li>
         
         <li> <a href="#" data-toggle="collapse" data-target="#tables" class="collapsed active" ><i class="fa fa-table"></i> <span class="nav-label" id="tables_text">Tables</span><span class="fa fa-chevron-left pull-right" id="icon_chevron3"></span></a>
-        <!-- <ul  class="sub-menu collapse" id="tables" >
+        <ul  class="sub-menu collapse" id="tables" >
           <li><a href=""> Static Tables</a></li>
           <li><a href=""> Data Tables</a></li>
        
-        </ul> -->
+        </ul>
       </li>
  
    
-  </ul>
-  </div>
+      </ul>
+      </div>
   </aside>
+
+      <div class="col-9" id="table_here"> 
+         
+        
+      
+
+
+
+        </div>
+
+
+  
+
   </div>
 
    </div>
