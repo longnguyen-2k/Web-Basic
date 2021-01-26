@@ -7,7 +7,7 @@
 
 .header {
     width: 100%;
-    height: 4.2em;
+    height: 5em;
     display: flex;
     justify-content: space-around;
 }
@@ -171,9 +171,9 @@
     margin-right: 30px;
 }
 
-.modal-content {
-    margin-right: 5rem !important;
+#content-modal {
     width: 24rem!important;
+    margin-right: 5rem !;
 }
 
 .nav-tabs {
@@ -208,10 +208,8 @@
     color: #f9faf9 !important;
 }
 
-.modal-footer .btn-secondary {
-    background: #f9faf9 !important;
-    color: red !important;
-    border: red !important;
+#content-modal-input {
+    width: 35rem !important;
 }
 
 
@@ -333,7 +331,7 @@ figure:hover+span {
         width: 65%;
         display: flex;
         padding: 0;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.8rem;
     }
     #form-control {
         width: 70% !important;
@@ -477,7 +475,7 @@ figure:hover+span {
         height: 100%;
         width: 50%;
         font-size: 2rem;
-        margin-top: 0.25em;
+        margin-top: 0.5em;
     }
     .menu {
         line-height: 2em;
