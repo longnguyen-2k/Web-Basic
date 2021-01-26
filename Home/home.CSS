@@ -202,6 +202,14 @@
 
 /* Modal input info */
 
+#exModal {
+    padding-top: 0 !important;
+}
+
+label {
+    padding: 0;
+}
+
 .btn-outline-danger {
     border: #016d3b !important;
     background: #016d3b !important;
@@ -262,6 +270,10 @@ figure {
 figure:hover+span {
     bottom: -36px;
     opacity: 1;
+}
+
+.content a:hover {
+    text-decoration: none;
 }
 
 .card img {
