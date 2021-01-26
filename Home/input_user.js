@@ -1,4 +1,4 @@
-const API_URL = "https://600d5237f979dd001745ca76.mockapi.ia";
+const API_URL = "https://600d5237f979dd001745ca76.mockapi.io/user";
 
 function callAPI(endpoint, method = "GET", body) {
     return axios({
@@ -13,7 +13,7 @@ function callAPI(endpoint, method = "GET", body) {
 var users = [{
         NewUsername: "Tuanhero",
         newEmail: "tuan.nguyenit263@gmail.com",
-        password: "2632001",
+        newPassword: "2632001",
         name: "Nguyen Anh Tuan",
         age: "18",
         phones: "0829970447",
@@ -34,69 +34,58 @@ if (localStorage.getItem("user") != null) {
     load();
 }
 
-// var productAdmin = function() {
-//     var listProd = "";
-//     for (var i in product) {
-//         var data = JSON.parse(JSON.stringify(product[i]))
-//         var listProd = '<tr>'
-//         listProd += '<td>' + data.id + '</td>';
-//         listProd += '<td>' + data.name + '</td>';
-//         listProd += '<td> <img src ="' + data.img + '" alt="..." style = "width:100px"></td>';
-//         listProd += '<td>' + data.price + '</td>';
-//         listProd += '<td><button onclick ="update(' +
-//             i + ')" class = "btn btn-outline-danger" data-toggle="modal" data-target="#update"><i class="fas fa-cogs"></i></button>';
-//         listProd += '<button onclick="deleteProd(' +
-//             i + ')" class = "btn m1-1 btn-outline-warning"> <i class="fas fa-trash"></i></button></td>';
-//         listProd += '</tr>';
-//         document.getElementById("pr-admin").innerHTML += listProd;
-//     }
+var id;
+for (i = 0; i <= users.length; i++) {
+    id = i;
+};
+var input_data = function() {
+
+    var account = {
+        id: id,
+        NewUsername: document.getElementById("NewUsername").value,
+        newEmail: document.getElementById("newEmail").value,
+        newPassword: document.getElementById("newPassword").value,
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value | 0,
+        phones: document.getElementById("phones").value,
+        job: document.getElementById("job").value,
+    }
+    users.push(account);
+    localStorage.setItem('user', JSON.stringify(users));
+    save();
+    window.location.reload();
+    callAPI("user", "POST", account).then((response) => {
+
+    });
+
+}
+
+
+//     // Hiển thị thông tin
+// function show() {
+//     callAPI("user", "GET", null).then((res) => {
+//         hotels = res.data;
+//         let row = "";
+//         for (i in user) {
+//             row += "<tr >";
+//             row += "<td>" + user[i].id + "</td>";
+//             row += "<td>" + user[i].username + "</td>";
+//             row += "<td>" + user[i].newEmail + "</td>";
+//             row += "<td>" + user[i].password + "</td>";
+//             row += "<td>" + user[i].name + "</td>";
+//             row += "<td>" + user[i].age + "</td>";
+//             row += "<td>" + user[i].address + "</td>";
+//             row += "<td>" + user[i].job + "</td>";
+//             row += "<td>" +
+//                 `<button type="button" onclick="editsp(${i})" class="btn btn-success">Edit</button>` + "</td>";
+//             row += "< td >" + `<button type="button" onclick="deletesp(${i})" class="btn btn-danger">Delete</button>` + "</td>";
+//             row += "</tr>";
+//         }
+//         document.getElementById("tab").innerHTML = row;
+//     });
 //     save();
 // }
-// productAdmin();
-var input_data = function() {
-        var account = {
-            NewUsername: document.getElementById("NewUsername").value,
-            newEmail: document.getElementById("newEmail").value,
-            password: document.getElementById("password").value,
-            name: document.getElementById("name").value,
-            age: document.getElementById("age").value | 0,
-            phones: document.getElementById("phones").value,
-            job: document.getElementById("job").value,
-        }
-        users.push(account);
-        localStorage.setItem('user', JSON.stringify(users));
-        save();
-        window.location.reload();
-        callAPI("user", "POST", account).then((response) => {
-            show();
-            alert("Thêm thông tin thành công!");
-        });
-    }
-    //     // Hiển thị thông tin
-    // function show() {
-    //     callAPI("user", "GET", null).then((res) => {
-    //         hotels = res.data;
-    //         let row = "";
-    //         for (i in user) {
-    //             row += "<tr >";
-    //             row += "<td>" + user[i].id + "</td>";
-    //             row += "<td>" + user[i].username + "</td>";
-    //             row += "<td>" + user[i].newEmail + "</td>";
-    //             row += "<td>" + user[i].password + "</td>";
-    //             row += "<td>" + user[i].name + "</td>";
-    //             row += "<td>" + user[i].age + "</td>";
-    //             row += "<td>" + user[i].address + "</td>";
-    //             row += "<td>" + user[i].job + "</td>";
-    //             row += "<td>" +
-    //                 `<button type="button" onclick="editsp(${i})" class="btn btn-success">Edit</button>` + "</td>";
-    //             row += "< td >" + `<button type="button" onclick="deletesp(${i})" class="btn btn-danger">Delete</button>` + "</td>";
-    //             row += "</tr>";
-    //         }
-    //         document.getElementById("tab").innerHTML = row;
-    //     });
-    //     save();
-    // }
-    // show();
+// show();
 
 
 
