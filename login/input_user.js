@@ -39,7 +39,6 @@ for (i = 0; i <= users.length; i++) {
     id = i;
 };
 var input_data = function() {
-
     var account = {
         id: id,
         NewUsername: document.getElementById("NewUsername").value,
@@ -53,11 +52,22 @@ var input_data = function() {
     users.push(account);
     localStorage.setItem('user', JSON.stringify(users));
     save();
-    window.location.reload();
+    window.location.replace("../Home/home.html");
     callAPI("user", "POST", account).then((response) => {
 
     });
 
+}
+var login = function() {
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    if (username == NewUsername && password == newPassword) {
+        alert('Đăng nhập thành công');
+        window.location.reload("../Home/home.html");
+    } else {
+        alert('Đăng nhập không thành công');
+        window.location.reload();
+    }
 }
 
 

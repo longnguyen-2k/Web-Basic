@@ -24,7 +24,7 @@
 
         <header class="header">
             <div class="logo">
-                <img src="Image/Logo.jpg" width="50px" />
+                <img src="../Home/Image/Logo.jpg" width="50px" />
             </div>
             <div class="silogan">
                 <B>
@@ -39,7 +39,7 @@
         <div class="menu">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="../Home/index.HTML">Trang chủ</a>
+                    <a class="nav-link" href="../Home/home.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="TrangCuocSong.html">Cuộc sống</a>
@@ -61,7 +61,7 @@
                         <i class="fas fa-bars fa-x"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button" id="button-dropdown-item" data-toggle="modal" data-target=".login-register-form">Đăng nhập</button>
+                        <a class="dropdown-item" href="../Profile/Interface profile.html">Trang cá nhân</a>
                         <div class="br"><br></div>
                         <div class="menu-nav">
                             <a class="dropdown-item" href="TrangCuocSong.html">Cuộc sống</a>
@@ -74,68 +74,10 @@
                         <a class="dropdown-item" href="#">Cài đặt</a>
                         <a class="dropdown-item" href="#">Hỗ trợ</a>
                         <div class="br"><br></div>
-                        <button class="dropdown-item" id="button-dropdown-item" type="button">Đăng xuất</button>
+                        <a class="dropdown-item" href="../login/index.html">Đăng xuất</a>
                     </div>
                 </div>
             </ul>
-            <div class="modal fade login-register-form" role="dialog">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" style="margin-top: 4px; margin-left: 88%;">&times;</button>
-                        <div class="modal-header">
-
-                            <span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#login-form"> Đăng nhập <span></span></a></li>
-                                <li><a data-toggle="tab" href="#registration-form"> Đăng ký <span></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="modal-body">
-                            <div class="tab-content">
-                                <div id="login-form" class="tab-pane fade in active">
-                                    <form action="/">
-                                        <div class="form-group">
-                                            <label for="username" style="color: #016d3b ;">Tên người dùng:</label>
-                                            <input type="username" class="form-control" id="email" placeholder="Tên người dùng" name="name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pwd" style="color: #016d3b ;">Mật khẩu:</label>
-                                            <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
-                                        </div>
-                                        <div class="checkbox">
-                                            <label style="color: #016d3b ;"><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-default" style="background-color:  #016d3b; color: white;">Đăng nhập</button>
-                                    </form>
-                                </div>
-                                <div id="registration-form" class="tab-pane fade">
-                                    <form action="/">
-                                        <div class="form-group">
-                                            <label for="username" style="color: #016d3b ;">Tên đăng nhập:</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Tên đăng nhập" name="name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="newemail" style="color: #016d3b ;">Email:</label>
-                                            <input type="email" class="form-control" id="newemail" placeholder="Đại chỉ email" name="newemail">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="newpwd" style="color: #016d3b ;">Mật khẩu:</label>
-                                            <input type="password" class="form-control" id="newpwd" placeholder="Mật khẩu" name="newpwd">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pwdd" style="color: #016d3b ;">Xác nhận mật khẩu:</label>
-                                            <input type="password" class="form-control" id="pwdd" placeholder="Xác nhận mật khẩu" name="pwdd">
-                                        </div>
-                                        <button type="submit" class="btn btn-default" style="background-color:  #016d3b; color: white;">Đăng ký</button>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- SONG -->
@@ -278,7 +220,7 @@
 
         <table class="table table-sm">
             <tr>
-                <td><a class="nav-link" href="../Home/index.HTML">Trang chủ</a></td>
+                <td><a class="nav-link" href="../Home/home.html">Trang chủ</a></td>
                 <td><a class="nav-link " href="../Topic page/TrangThoiTrang.html">Thời trang</a></td>
             </tr>
             <tr>
@@ -296,7 +238,7 @@
 
     <div class="row">
         <div class="col-md-4 col-xs-2  col-lg-4 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-            <img class="logo-footer" src="Image/Logo2.jpg" alt="logo-footer" data-at2x="Image/Logo2.jpg" width="60px">
+            <img class="logo-footer" src="../Home/Image/Logo2.jpg" alt="logo-footer" data-at2x="Image/Logo2.jpg" width="60px">
             <p class="content-footer">
                 Cộng đồng những người đàn ông có cùng khao khát muốn trở thành phiên bản tốt nhất của bản thân, cung cấp kiến thức và cùng chia sẽ trên nhiều lĩnh vực.</p>
 

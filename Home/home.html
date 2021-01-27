@@ -4,8 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="home.CSS">
-    <script src="./input_user.js"></script>
-    <script src="./login.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
@@ -37,7 +35,7 @@
         <div class="menu">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.HTML">Trang chủ</a>
+                    <a class="nav-link" href="home.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Topic page/TrangCuocSong.html">Cuộc sống</a>
@@ -60,7 +58,7 @@
                         <i class="fas fa-bars fa-x"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button" id="button-login" data-toggle="modal" data-target=".login-register-form">Đăng nhập</button>
+                        <a class="dropdown-item" href="../Profile/Interface profile.html">Trang cá nhân</a>
                         <div class="br"><br></div>
                         <div class="menu-nav">
                             <a class="dropdown-item" href="../Topic page/TrangCuocSong.html">Cuộc sống</a>
@@ -70,109 +68,14 @@
                             <a class="dropdown-item" href="../Topic page/TrangSach.html">Sách</a>
                         </div>
                         <div class="br"><br></div>
-                        <a class="dropdown-item" href="../Profile/Interface profile.html">Trang cá nhân</a>
                         <a class="dropdown-item" href="#">Cài đặt</a>
                         <a class="dropdown-item" href="#">Hỗ trợ</a>
                         <div class="br"><br></div>
-                        <button class="dropdown-item" id="button-dropdown-item">Đăng xuất</button>
+                        <a class="dropdown-item" href="../login/index.html">Đăng xuất</a>
                     </div>
                 </div>
-                <!-- Modal Login -->
-                <div class="modal fade login-register-form" role="dialog" id="demo">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content" id="content-modal">
-                            <button type="button" class="close" data-dismiss="modal" style="margin-top: 4px; margin-left: 88%;">&times;</button>
-                            <div class="modal-header">
-                                <span class="glyphicon glyphicon-remove"></span>
-                                </button>
-                                <ul class="nav nav-tabs">
-                                    <li class="active-button"><a data-toggle="tab" href="#login-form"> Đăng nhập 
-                                        <span class="glyphicon glyphicon-user"></span></a></li>
-                                    <li class="active-button"><a data-toggle="tab" href="#registration-form"> Đăng ký 
-                                        <span class="glyphicon glyphicon-pencil"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="modal-body">
-                                <div class="tab-content">
-                                    <div id="login-form" class="tab-pane fade in active">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="username">Tên người dùng:</label>
-                                                <input type="username" class="form-control" id="username" placeholder="Tên người dùng" name="name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pwd">Mật khẩu:</label>
-                                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" name="password">
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-default" onclick="login()">Đăng nhập</button>
-                                        </form>
-                                    </div>
-                                    <div id="registration-form" class="tab-pane fade">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="username">Tên đăng nhập:</label>
-                                                <input type="text" class="form-control" id="NewUsername" placeholder="Tên đăng nhập" name="name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="newemail">Email:</label>
-                                                <input type="email" class="form-control" id="newEmail" placeholder="Đại chỉ email" name="newemail">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="newpwd">Mật khẩu:</label>
-                                                <input type="password" class="form-control" id="newPassword" placeholder="Mật khẩu" name="newPassword">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pwdd">Xác nhận mật khẩu:</label>
-                                                <input type="password" class="form-control" id="rePassword" placeholder="Xác nhận mật khẩu" name="rePassword">
-                                            </div>
-                                        </form>
-                                        <button class="btn btn-default" id="window1" data-toggle="modal" data-target="#exModal" onclick="hide()">Đăng ký</button>
 
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </ul>
-        </div>
-        <!-- Modal input data profile -->
-        <div class="modal fade" id="exModal" tabindex="-1" role="dialog" aria-labelledby="exModal" aria-hidden="true">
-            <div class="modal-dialog ">
-                <div class="modal-content" id="content-modal-input">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exModalLabel"> Thêm thông tin cá nhân</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="" class="form-row">
-                            <div class="col-12 mt-3">
-                                <label for="name">Tên đầy đủ</label>
-                                <input type="text" class="form-control" id="name" placeholder="Full name">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <label for="age">Tuổi</label>
-                                <input type="number" id="age" class="form-control" placeholder="Age">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <label for="">Số điện thoại</label>
-                                <input type="text" id="phones" class="form-control" placeholder="Phone">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <label for="">Công việc</label>
-                                <input type="text" id="job" class="form-control" placeholder="Job">
-                            </div>
-                        </form>
-                        <button onclick="input_data()" class="btn btn-outline-danger" id="button-info">Hoàn tất</button>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- Content -->
         <div class="content">
