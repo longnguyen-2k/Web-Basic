@@ -187,8 +187,8 @@
     text-decoration: none;
 }
 
-#info_profile {
-    margin: 0 !important;
+#mytextare1 {
+    margin-right: 5rem;
 }
 
 .col-md-3 {
@@ -344,6 +344,9 @@
     }
     #footer h3 {
         font-size: 1rem;
+    }
+    .content-footer {
+        display: none;
     }
     .col-md-3 {
         display: none;
