@@ -4,12 +4,19 @@ const URL_API_User = "https://600ba4de38fd25001702ca61.mockapi.io/api/User";
 
 const URL_API_News = "https://600ba4de38fd25001702ca61.mockapi.io/api/News";
 
+//location.assign('url) : load  html
+
 class User {
 
 
   listUser = [];
   constructor( userName, passWord, name, phone, email, address, regDate) {
+    if(this.listUser.length==0 ||this.listUser==null){
+    this.id=1;
+  }
+    else{
     this.id = this.listUser[this.listUser.length-1].id;
+    }
     this.userName = userName;
     this.passWord = passWord;
     this.name = name;
@@ -17,10 +24,19 @@ class User {
     this.email = email;
     this.address = address;
     this.regDate = regDate;
-
+    
   }
+
+  addNew(id){
+    this.idNews.push(id);
+  }
+
+
   static getUserID(id) {
 
+    return  this.listUser.filter((value) =>{
+      return value.id===id
+     })
   }
 
 
@@ -82,7 +98,7 @@ class User {
   }
 
   static loadData() {
-    User.callAPI('', "GET", null).then((res) => { this.listUser = res.data; });
+    User.callAPI('', "GET", null).then((res) => { this.listUser = res.data;  });
   }
 
   static editUserByID(id, body) {
@@ -109,14 +125,16 @@ class User {
 
 var listNews=[];
 class News{
+    listUserLike=[];
+    listUserShare=[];
 
+    like=0;
+    share=0;
   constructor(title,	userName,	subject	,content,	like,	comments,	share){
     if(listNews>0){
     this.id=listNews[listNews.length-1].id;}
     else{
     this.id=1;}
-
-
     this.title=title;
     this.userName=userName;
     this.subject=subject;
@@ -128,8 +146,6 @@ class News{
 
 
   static getNewByID(id) {
-
-
   listNews.filter((value) =>{
      return value.id===id
     })
@@ -137,7 +153,28 @@ class News{
   }
 
 
+  countLike(idUser){
 
+      if(this.listUserLike.findIndex(value=> {return value==idUser})==-1)
+          this.like--;
+      else 
+          this.like++;
+
+  }
+
+  addComment(body,idUser){
+    if(this.listUserShare==null){
+      this.listUserShare=[];
+    }
+
+   var comment ={
+      idUser:idUser,
+      content:body,
+    };
+    this.listUserShare.push(comment);
+  }
+
+  
   getNew() {
     return this;
   }
@@ -186,6 +223,53 @@ class News{
   
 
   }
+
+
+
+}
+
+
+function randomNumber(from,to){ //radom 1 so trong 1 khoang cho truoc
+  
+  
+
+  return Math.floor( Math.random()*(to-from))+from+1;
+}
+
+
+function randomNews(from,to){
+
+ return listNews[randomNumber(from,to)];//tra ve mot bai dang ngau nhien
+
+}
+
+function  CreateBaiDang(n) { // Truyen vao so luong can lay,(n) Ham nay tra ve mang ngau nhien cua cac bai dang// No khong lap lai cac bai trung nhau
+  
+  if(typeof n !==Number){
+    n=parent(n);
+  }
+   var arr=[];
+   if(n> listNews.length){ // n truyen vao  khong duoc nhieu hon so bai new dang co
+     n=listNews.length;
+   }
+  for (let index = 0; index <n; index++) {
+     
+     if(arr==[]){
+      arr.push( CreateBaiDang(0,n));
+     }
+     else{
+          var ys= CreateBaiDang(0,n);
+        if(  arr.findIndex(value=> ys.id===value.id )==-1) //neu ton tai thi random tiep
+          {
+            i--;
+          }
+        else{
+         arr.push(ys); 
+        }
+     }
+     
+  }
+
 
 
 

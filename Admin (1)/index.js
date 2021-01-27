@@ -1,9 +1,13 @@
 
+
  window.onload =init();
 function init() {// chuan bi du lieu
     User.loadData();
     News.loadData();
-
+    // setTimeout(() => {
+    //     console.log('Hello Timeout!')
+    //  }, 3000);
+    
 }
 
 var $ = function (id) {
@@ -38,6 +42,7 @@ function menu_scroll() {
 
     }
 
+  
 
 
 
