@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="home.CSS">
     <script src="./input_user.js"></script>
+    <script src="./login.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
@@ -15,11 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<script>
-    var hide = function() {
-        $('#exModal').modal('hide');
-    }
-</script>
 
 <body>
     <div class="monitor">
@@ -111,7 +107,7 @@
                                             <div class="checkbox">
                                                 <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
                                             </div>
-                                            <button type="submit" class="btn btn-default">Đăng nhập</button>
+                                            <button type="submit" class="btn btn-default" onclick="login()">Đăng nhập</button>
                                         </form>
                                     </div>
                                     <div id="registration-form" class="tab-pane fade">
