@@ -1,36 +1,45 @@
-const API_URL = "https://600d5237f979dd001745ca76.mockapi.io/user";
+const URL_API = "https://600ba4de38fd25001702ca61.mockapi.io/api/User";
 
-function callAPI(endpoint, method = "GET", body) {
+function callAPI(endpoint, method, body) {
     return axios({
         method: method,
-        url: `${API_URL}/${endpoint}`,
+        url: `${URL_API}/${endpoint}`,
         data: body,
-    }).catch((err) => {
+    }).
+    catch((err) => {
         console.log(err);
     });
 }
 
 var users = [{
-        NewUsername: "Tuanhero",
-        newEmail: "tuan.nguyenit263@gmail.com",
+        newUsername: "Tuanhero",
         newPassword: "2632001",
+        newEmail: "tuan.nguyenit263@gmail.com",
         name: "Nguyen Anh Tuan",
         age: "18",
         phones: "0829970447",
         job: "UX/UI designer",
     },
-
+    {
+        newUsername: "Phonglong",
+        newPassword: "11111",
+        newEmail: "long.phong@gmail.com",
+        name: "Nguyen Dinh Long",
+        age: "18",
+        phones: "09740047",
+        job: "Back-end Developer",
+    },
 ];
 
 function save() {
-    localStorage.setItem('user', JSON.stringify(users));
+    localStorage.setItem('user_local', JSON.stringify(users));
 }
 
 function load() {
-    users = JSON.parse(localStorage.getItem('user'));
+    users = JSON.parse(localStorage.getItem('user_local'));
 }
 
-if (localStorage.getItem("user") != null) {
+if (localStorage.getItem("user_local") != null) {
     load();
 }
 
@@ -41,61 +50,84 @@ for (i = 0; i <= users.length; i++) {
 var input_data = function() {
     var account = {
         id: id,
-        NewUsername: document.getElementById("NewUsername").value,
-        newEmail: document.getElementById("newEmail").value,
+        newUsername: document.getElementById("newUsername").value,
         newPassword: document.getElementById("newPassword").value,
+        newEmail: document.getElementById("newEmail").value,
         name: document.getElementById("name").value,
         age: document.getElementById("age").value | 0,
         phones: document.getElementById("phones").value,
         job: document.getElementById("job").value,
     }
     users.push(account);
-    localStorage.setItem('user', JSON.stringify(users));
     save();
-    window.location.replace("../Home/home.html");
-    callAPI("user", "POST", account).then((response) => {
-
+    callAPI("User", "POST", account).then(respone => {
+        alert("Tạo tài khoản thành công!");
+        window.location.replace("../Home/home.html");
     });
 
+
 }
+var check = 0;
+var checkLogin = function() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    for (var i in users) {
+        var data = JSON.parse(JSON.stringify(users[i]))
+        if (username == data.newUsername && password == data.newPassword) {
+            check++;
+        } else {
+            check = 0;
+        }
+        return check;
+    }
+}
+
 var login = function() {
-    var username = document.getElementById('username');
-    var password = document.getElementById('password');
-    if (username == NewUsername && password == newPassword) {
-        alert('Đăng nhập thành công');
-        window.location.reload("../Home/home.html");
+    if (checkLogin() != 0) {
+        alert("Đăng nhập thành công!");
+        window.location.replace("../Home/home.html");
     } else {
-        alert('Đăng nhập không thành công');
-        window.location.reload();
+        document.getElementById('errorText').innerHTML = "Tên đăng nhập hoặc mật khẩu sai!";
+
     }
 }
 
 
-//     // Hiển thị thông tin
-// function show() {
-//     callAPI("user", "GET", null).then((res) => {
-//         hotels = res.data;
-//         let row = "";
-//         for (i in user) {
-//             row += "<tr >";
-//             row += "<td>" + user[i].id + "</td>";
-//             row += "<td>" + user[i].username + "</td>";
-//             row += "<td>" + user[i].newEmail + "</td>";
-//             row += "<td>" + user[i].password + "</td>";
-//             row += "<td>" + user[i].name + "</td>";
-//             row += "<td>" + user[i].age + "</td>";
-//             row += "<td>" + user[i].address + "</td>";
-//             row += "<td>" + user[i].job + "</td>";
-//             row += "<td>" +
-//                 `<button type="button" onclick="editsp(${i})" class="btn btn-success">Edit</button>` + "</td>";
-//             row += "< td >" + `<button type="button" onclick="deletesp(${i})" class="btn btn-danger">Delete</button>` + "</td>";
-//             row += "</tr>";
-//         }
-//         document.getElementById("tab").innerHTML = row;
-//     });
-//     save();
-// }
-// show();
+var checkSignUp;
+var checkSignup = function() {
+    var newUsername = document.getElementById('newUsername').value;
+    var newEmail = document.getElementById('newEmail').value;
+    var newPassword = document.getElementById('newPassword').value;
+    var rePass = document.getElementById('rePassword').value;
+    for (var i in users) {
+        var data = JSON.parse(JSON.stringify(users[i]))
+        if (newUsername == data.newUsername) {
+            checkSignUp = 1;
+        } else if (rePass != newPassword) {
+            checkSignUp = 2;
+        } else if (newUsername == "" || newPassword == "" || rePass == "" || newEmail == "") {
+            checkSignUp = 3;
+        } else {
+            checkSignUp = 4;
+        }
+    }
+    return checkSignUp;
+}
+
+var signUP = function() {
+    if (checkSignup() == 1) {
+        alert("Tên đăng nhập tồn tại !");
+    } else if (checkSignup() == 2) {
+        alert("Nhập mật khẩu sai !");
+    } else if (checkSignup() == 3) {
+        alert("Thông tin không được để trống!");
+    } else {
+        alert("Đăng ký tài khoản thành công !");
+        console.log(checkSignup())
+        $('#exModal').modal('show');
+
+    }
+}
 
 
 

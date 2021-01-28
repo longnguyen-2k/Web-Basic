@@ -314,6 +314,11 @@ footer a {
     color: white !important;
 }
 
+#errorText {
+    color: red;
+    font-size: 1rem;
+}
+
 
 /* Modal input info */
 

@@ -3,7 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_index.css">
-    <script src="./login.js"></script>
     <script src="./input_user.js"></script>
     <link rel="stylesheet" href="../Home/base.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -19,7 +18,7 @@
 </head>
 
 <body>
-    <h2>Đăng nhập/Đăng ký</h2>
+    <h2>REAL MAN</h2>
     <div class="container" id="container">
         <!-- Tạo tài khoản -->
         <div class="form-container sign-up-container">
@@ -28,7 +27,7 @@
                 <p></p>
                 <div class="form-group">
                     <label for="username">Tên đăng nhập:</label>
-                    <input type="text" class="form-control" id="NewUsername" placeholder="Tên đăng nhập" name="name">
+                    <input type="text" class="form-control" id="newUsername" placeholder="Tên đăng nhập" name="name">
                 </div>
                 <div class="form-group">
                     <label for="newemail">Email:</label>
@@ -42,9 +41,10 @@
                     <label for="pwdd">Xác nhận mật khẩu:</label>
                     <input type="password" class="form-control" id="rePassword" placeholder="Xác nhận mật khẩu" name="rePassword">
                 </div>
-                <button class="btn btn-default" id="window1" data-toggle="modal" data-target="#exModal">Đăng ký</button>
+                <button class="btn btn-default" id="window1" onclick="signUP()">Đăng ký</button>
             </div>
         </div>
+
         <!-- Modal input data profile -->
         <div class="modal fade" id="exModal" tabindex="-1" role="dialog" aria-labelledby="exModal" aria-hidden="true">
             <div class="modal-dialog ">
@@ -85,7 +85,7 @@
                 <h1>Đăng nhập</h1>
                 <p></p>
                 <div class="form-group">
-                    <label for="username">Tên người dùng:</label>
+                    <label for="userName">Tên người dùng:</label>
                     <input type="username" class="form-control" id="username" placeholder="Tên người dùng" name="name">
                 </div>
                 <div class="form-group">
@@ -96,7 +96,7 @@
                     <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
                 </div>
                 <div align='center' id='errorText'></div>
-                <button type="submit" class="btn btn-default" id="login-acc" onclick="dn()">Đăng nhập</button>
+                <button type="submit" class="btn btn-default" id="login-acc" onclick="login()">Đăng nhập</button>
             </div>
         </div>
         <div class="overlay-container">
