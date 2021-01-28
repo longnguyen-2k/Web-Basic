@@ -2,7 +2,8 @@
  function table_user(){
     var html=`
     <h2 class="text-center" style="color: black; "> Quản lý người dùng  </h2>
-    <button class="btn btn-primary"> <i class="fa fa-plus"></i> &ThickSpace; Thêm user </button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i> &ThickSpace; Thêm user </button>
+
 <table class="table  table-striped table-hover table-dark" id="table_user"  >
 <thead class="text-center" id="thead_user">
 <tr>
@@ -30,6 +31,8 @@
   function table_news(){
     var html=`
     <h2 class="text-center" style="color: black; padding-top: 20px;"> Quản Lý Bài Đăng  </h2>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i> &ThickSpace; Thêm bài viết </button>
+
       <table class="table  table-striped table-hover table-dark" id="table_news"  >
     <thead class="text-center" id="thead_news">
       <tr>

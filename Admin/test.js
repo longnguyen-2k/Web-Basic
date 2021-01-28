@@ -28,15 +28,15 @@
  //node test.js is run file test.js
  // $ npm install axios --save
 
-const axios = require('axios');
+// const axios = require('axios');
 
-axios.get('http://localhost:3000/posts')
-    .then(resp => {
-        data = resp.data;
-        data.forEach(e => {
-            console.log(`${e.id}, ${e.title}, ${e.author}`);
-        });
-    })
-    .catch(error => {
-        console.log(error);
-    });  
+// axios.get('http://localhost:3000/posts')
+//     .then(resp => {
+//         data = resp.data;
+//         data.forEach(e => {
+//             console.log(`${e.id}, ${e.title}, ${e.author}`);
+//         });
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     });  
