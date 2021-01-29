@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        function onclick_modal() {
+
+            $('#demo').modal('hide');
+            $('#exModal').modal('show');
+
+        }
+    </script>
 </head>
 
 <body>
@@ -23,7 +30,7 @@
 
         <header class="header">
             <div class="logo">
-                <img src="../Home/Image/Logo.jpg" width="50px" />
+                <img src="Image/Logo.jpg" width="50px" />
             </div>
             <div class="silogan">
                 <B>
@@ -39,7 +46,7 @@
         <div class="menu">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="../Home/home.html">Trang chủ</a>
+                    <a class="nav-link" href="index.HTML">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Topic page/TrangCuocSong.html">Cuộc sống</a>
@@ -62,6 +69,7 @@
                         <i class="fas fa-bars fa-x"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button" id="button-dropdown-item" data-toggle="modal" data-target=".login-register-form">Đăng nhập</button>
                         <div class="br"><br></div>
                         <div class="menu-nav">
                             <a class="dropdown-item" href="../Topic page/TrangCuocSong.html">Cuộc sống</a>
@@ -74,7 +82,7 @@
                         <a class="dropdown-item" href="#">Cài đặt</a>
                         <a class="dropdown-item" href="#">Hỗ trợ</a>
                         <div class="br"><br></div>
-                        <a class="dropdown-item" href="../login/index.html">Sách</a>
+                        <button class="dropdown-item" id="button-dropdown-item">Đăng xuất</button>
                     </div>
                 </div>
             </ul>
@@ -92,7 +100,7 @@
                         </div>
                     </div>
                     <nav class="navbar bg-light">
-                        <ul class="navbar-nav mr-5 mx-auto">
+                        <ul class="navbar-nav mr-5 mx-auto  ">
 
                             <li class="nav-item ">
                                 <a class="nav-link" data-toggle="modal" data-target="#dialog1" href="#">Chỉnh sửa tiểu sử</a>
@@ -108,7 +116,7 @@
                                 <a class="nav-link" href="#">Thông báo</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="#">Bảo vệ</a>
                             </li>
                         </ul>
@@ -121,8 +129,9 @@
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <i class="fas fa-pen"></i>
+
                                 <h5 class="modal-title">Chỉnh sửa thông tin cá nhân</h5>
+                                <i class="fas fa-pen"></i>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                      </button>
@@ -161,8 +170,8 @@
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <i class="fas fa-pen"></i>
                                 <h5 class="modal-title">Thay đổi mật khẩu</h5>
+                                <i class="fas fa-pen"></i>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -193,8 +202,8 @@
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <i class="fas fa-pen"></i>
                                 <h5 class="modal-title">Thay đổi email</h5>
+                                <i class="fas fa-pen"></i>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -237,7 +246,7 @@
                                     </div>
 
                                     <div class="modal-body">
-                                        <textarea rows="1" cols="20" class="form-control" id="mytextare1" placeholder="Tiêu đề"></textarea>
+                                        <textarea class="form-control" id="mytextare1" placeholder="Tiêu đề"></textarea>
                                         <select name="Chọn chủ đề" id="topic">
                                         <option disabled selected hidden >Chọn chủ đề</option>
                                         <option value="Cuocsong">Cuộc sống</option>
@@ -276,85 +285,41 @@
                             đồng thời nghi vấn phương pháp luận của nghiên cứu trên.[51] Hai năm sau (2011), Wales thừa nhận một sự suy giảm nhẹ, ghi nhận sự giảm từ "nhiều hơn 36.000 biên tập viên một chút" vào tháng 6 năm 2010 xuống còn 35.800 vào tháng
                             6 năm 2011. Trong cùng một cuộc phỏng vấn, Wales cũng tuyên bố số lượng biên tập viên là "ổn định và bền vững".[52] Một bài báo năm 2013 có tiêu đề "Sự suy tàn của Wikipedia" trên Technology Review (Tạp chí Công nghệ) của MIT
                             đã đặt câu hỏi về tuyên bố này. Bài báo này tiết lộ rằng, kể từ năm 2007, Wikipedia đã mất đi một phần ba số biên tập viên tình nguyện, những người ở lại Wikipedia thì ngày càng tập trung vào những điều vụn vặt.[53] Tháng 7
-                            năm 2012, The Atlantic báo cáo rằng số lượng quản trị viên Wikipedia cũng đang giảm dần.[54] Trong số ra ngày 25 tháng 11 năm 2013 của tạp chí New York, Katherine Ward cho biết "Wikipedia, trang web được sử dụng nhiều thứ sáu
-                            toàn cầu, đang đối mặt với một cuộc khủng hoảng nội bộ".[55] Các cột mốc Bản đồ hiển thị số lượng bài viết của từng ngôn ngữ Châu Âu tính đến tháng 1 năm 2019. Một hình vuông đại diện cho 10.000 bài viết. Các ngôn ngữ có ít
-                            hơn 10.000 bài viết được thể hiện bằng một ô vuông. Các ngôn ngữ được nhóm theo ngữ hệ và mỗi ngữ hệ được trình bày bằng một màu riêng biệt. Tháng 1 năm 2007 là lần đầu tiên Wikipedia lọt vào danh sách 10 trang web phổ biến
-                            nhất ở Mỹ, theo comScore Networks. Với 42,9 triệu lượt người truy cập, Wikipedia nằm ở vị trí thứ 9, vượt qua The New York Times (hạng 10) và Apple (hạng 11). Điều này đánh dấu sự gia tăng đáng kể so với tháng 1 năm 2006 (hạng
-                            33), tức Wikipedia nhận được khoảng 18,3 triệu người truy cập.[56] Tính đến tháng 3 năm 2020, theo Alexa Internet, Wikipedia có thứ hạng 13 trong số các trang web về mức độ phổ biến.[5] Vào năm 2014, Wikipedia có tám tỷ lượt
-                            xem trang mỗi tháng.[57] Vào ngày 9 tháng 2 năm 2014, The New York Times báo cáo rằng Wikipedia có 18 tỷ lượt xem trang và gần 500 triệu người truy cập mỗi tháng, "theo công ty xếp hạng comScore".[11] Loveland và Reagle cho
-                            rằng, trong cả quá trình phát triển này, Wikipedia tuân theo một truyền thống lâu đời của bách khoa toàn thư lịch sử tích lũy sự cải tiến tiến từng phần thông qua "tích lũy kỳ thị".[58][59] Màn hình đen Wikipedia phản đối SOPA
-                            vào ngày 18 tháng 1 năm 2012 Vào ngày 18 tháng 1 năm 2012, Wikipedia tiếng Anh đã tham gia vào một loạt các cuộc biểu tình phối hợp chống lại hai luật được đề xuất tại Quốc hội Hoa Kỳ — Đạo luật Ngừng vi phạm bản quyền trực
-                            tuyến (SOPA) và Đạo luật BẢO VỆ IP (PIPA) — bằng cách bôi đen các trang trong 24 giờ.[60] Hơn 162 triệu người đã đọc thấy các trang giải thích tạm thời này.[61][62] Vào ngày 20 tháng 1 năm 2014, báo cáo của Subodh Varma cho
-                            The Economic Times (Thời báo Kinh tế) chỉ ra rằng không chỉ sự tăng trưởng của Wikipedia bị đình trệ mà nó đã "mất gần 10 phần trăm lượt xem trang vào năm ngoái. Đã có sự sụt giảm khoảng hai tỷ lượt xem trong giai đoạn tháng
-                            12 năm 2012 và tháng 12 năm 2013. Các phiên bản phổ biến nhất của nó đang dẫn đầu trang: lượt xem trang của Wikipedia tiếng Anh giảm 12%, phiên bản tiếng Đức giảm 17% và phiên bản tiếng Nhật giảm 9%." Varma cũng nói rằng "Trong
-                            khi các nhà quản lý Wikipedia nghĩ rằng điều này có thể là do sai sót trong việc đếm, các chuyên gia khác cảm thấy rằng dự án Knowledge Graph (Sơ đồ Tri thức) của Google được khởi động vào năm ngoái có thể đang lấy mất người
-                            dùng Wikipedia."[63] Khi được liên hệ về vấn đề này, Clay Shirky, phó giáo sư tại Đại học New York và đồng nghiệp tại Trung tâm Internet & Xã hội Berkman của Harvard cho biết rằng ông cho rằng phần lớn sự sụt giảm của số lượt
-                            xem trang là do Sơ đồ tri thức, nói rằng, "Nếu bạn có thể nhận được câu trả lời của mình từ w trang tìm kiếm, bạn sẽ kpedia.org Xếp hạng Alexa Giữ nguyên 10 (Toàn cầu, Tháng 1 năm 2018) Thương mại Không Yêu cầu đăng ký Tùy
-                            chọn[gc 1] Số người dùng >315.147 tài khoản hoạt động[note 1] và >85.634.144 tài khoản đã đăng ký 3.906 Quản trị viên (Bảo Quản Viên) Bắt đầu hoạt động 15 tháng 1 năm 2001; 20 năm trước Tình trạng hiện tại Đang hoạt động Giấy
-                            phép nội dung CC Attribution / Share-Alike 3.0. Đa số tài liều được cấp giấy phép kép dựa theo GFDL, giấy phép cho các tập tin phương tiện có thể khác. Viết bằng Nền tảng LAMP[3] Số OCLC 52075003 Wikipedia (/ˌwɪkɪˈpiːdiə/ (nghe)
-                            WIK-i-PEE-dee-ə hoặc /ˌwɪkiˈpiːdiə/ (nghe) WIK-ee-PEE-dee-ə) là một bách khoa toàn thư mở trực tuyến đa ngôn ngữ[4] được sáng lập và duy trì bởi một cộng đồng biên tập viên tình nguyện và chạy trên nền tảng wiki. Tính đến tháng
-                            1 năm 2021, theo xếp hạng của Alexa, Wikipedia là một trong 15 trang web phổ biến nhất thế giới[5] còn tạp chí The Economist xếp Wikipedia là "địa điểm được truy cập nhiều thứ 13 trên web".[6] Wikipedia không chạy quảng cáo
-                            và do tổ chức phi lợi nhuận Wikimedia Mặc dù Wikipedia tiếng Anh đạt ba triệu bài vào tháng 8 năm 2009, nhưng nếu xét về số lượng bài mới và số người đóng góp thì dường như sự phát triển của phiên bản tiếng Anh lại đạt đỉnh
-                            khoảng đầu năm 2007.[42] Vào năm 2006, mỗi ngày bách khoa toàn thư có khoảng 1.800 bài viết mới; đến năm 2013 mức trung bình đó là khoảng 800.[43] Một nhóm nghiên cứu tại Trung tâm Nghiên cứu Palo Alto cho rằng tốc độ tăng
-                            trưởng chậm lại này là do tính độc quyền ngày càng tăng của dự án và xu hướng cưỡng lại sự thay đổi.[44] Những người khác cho rằng sự phát triển đang đi ngang một cách tự nhiên bởi vì các bài viết thuộc chủ đề rõ ràng đủ nổi
-                            bật đều được tạo và có nội dung rồi.[45][46][47] Tháng 11 năm 2009, một nhà nghiên cứu tại Đại học Rey Juan Carlos ở Madrid phát hiện Wikipedia tiếng Anh đã mất đi 49.000 biên tập viên trong ba tháng đầu năm 2009, so với việc
-                            mất đi 4.900 biên tập viên trong cùng kỳ năm 2008.[48][49] The Wall Street Journal cho rằng một trong những lý do chính là một loạt các quy tắc được áp dụng cho việc biên tập và các tranh chấp liên quan đến nội dung.[50] Wales
-                            đã phản bác những tuyên bố này vào năm 2009, phủ nhận sự suy giảm đồng thời nghi vấn phương pháp luận của nghiên cứu trên.[51] Hai năm sau (2011), Wales thừa nhận một sự suy giảm nhẹ, ghi nhận sự giảm từ "nhiều hơn 36.000 biên
-                            tập viên một chút" vào tháng 6 năm 2010 xuống còn 35.800 vào tháng 6 năm 2011. Trong cùng một cuộc phỏng vấn, Wales cũng tuyên bố số lượng biên tập viên là "ổn định và bền vững".[52] Một bài báo năm 2013 có tiêu đề "Sự suy
-                            tàn của Wikipedia" trên Technology Review (Tạp chí Công nghệ) của MIT đã đặt câu hỏi về tuyên bố này. Bài báo này tiết lộ rằng, kể từ năm 2007, Wikipedia đã mất đi một phần ba số biên tập viên tình nguyện, những người ở lại
-                            Wikipedia thì ngày càng tập trung vào những điều vụn vặt.[53] Tháng 7 năm 2012, The Atlantic báo cáo rằng số lượng quản trị viên Wikipedia cũng đang giảm dần.[54] Trong số ra ngày 25 tháng 11 năm 2013 của tạp chí New York,
-                            Katherine Ward cho biết "Wikipedia, trang web được sử dụng nhiều thứ sáu toàn cầu, đang đối mặt với một cuộc khủng hoảng nội bộ".[55] Các cột mốc Bản đồ hiển thị số lượng bài viết của từng ngôn ngữ Châu Âu tính đến tháng 1
-                            năm 2019. Một hình vuông đại diện cho 10.000 bài viết. Các ngôn ngữ có ít hơn 10.000 bài viết được thể hiện bằng một ô vuông. Các ngôn ngữ được nhóm theo ngữ hệ và mỗi ngữ hệ được trình bày bằng một màu riêng biệt. Tháng 1
-                            năm 2007 là lần đầu tiên Wikipedia lọt vào danh sách 10 trang web phổ biến nhất ở Mỹ, theo comScore Networks. Với 42,9 triệu lượt người truy cập, Wikipedia nằm ở vị trí thứ 9, vượt qua The New York Times (hạng 10) và Apple
-                            (hạng 11). Điều này đánh dấu sự gia tăng đáng kể so với tháng 1 năm 2006 (hạng 33), tức Wikipedia nhận được khoảng 18,3 triệu người truy cập.[56] Tính đến tháng 3 năm 2020, theo Alexa Internet, Wikipedia có thứ hạng 13 trong
-                            số các trang web về mức độ phổ biến.[5] Vào năm 2014, Wikipedia có tám tỷ lượt xem trang mỗi tháng.[57] Vào ngày 9 tháng 2 năm 2014, The New York Times báo cáo rằng Wikipedia có 18 tỷ lượt xem trang và gần 500 triệu người truy
-                            cập mỗi tháng, "theo công ty xếp hạng comScore".[11] Loveland và Reagle cho rằng, trong cả quá trình phát triển này, Wikipedia tuân theo một truyền thống lâu đời của bách khoa toàn thư lịch sử tích lũy sự cải tiến tiến từng
-                            phần thông qua "tích lũy kỳ thị".[58][59] Màn hình đen Wikipedia phản đối SOPA vào ngày 18 tháng 1 năm 2012 Vào ngày 18 tháng 1 năm 2012, Wikipedia tiếng Anh đã tham gia vào một loạt các cuộc biểu tình phối hợp chống lại hai
-                            luật được đề xuất tại Quốc hội Hoa Kỳ — Đạo luật Ngừng vi phạm bản quyền trực tuyến (SOPA) và Đạo luật BẢO VỆ IP (PIPA) — bằng cách bôi đen các trang trong 24 giờ.[60] Hơn 162 triệu người đã đọc thấy các trang giải thích tạm
-                            thời này.[61][62] Vào ngày 20 tháng 1 năm 2014, báo cáo của Subodh Varma cho The Economic Times (Thời báo Kinh tế) chỉ ra rằng không chỉ sự tăng trưởng của Wikipedia bị đình trệ mà nó đã "mất gần 10 phần trăm lượt xem trang
-                            vào năm ngoái. Đã có sự sụt giảm khoảng hai tỷ lượt xem trong giai đoạn tháng 12 năm 2012 và tháng 12 năm 2013. Các phiên bản phổ biến nhất của nó đang dẫn đầu trang: lượt xem trang của Wikipedia tiếng Anh giảm 12%, phiên bản
-                            tiếng Đức giảm 17% và phiên bản tiếng Nhật giảm 9%." Varma cũng nói rằng "Trong khi các nhà quản lý Wikipedia nghĩ rằng điều này có thể là do sai sót trong việc đếm, các chuyên gia khác cảm thấy rằng dự án Knowledge Graph (Sơ
-                            đồ Tri thức) của Google được khởi động vào năm ngoái có thể đang lấy mất người dùng Wikipedia."[63] Khi được liên hệ về vấn đề này, Clay Shirky, phó giáo sư tại Đại học New York và đồng nghiệp tại Trung tâm Internet & Xã hội
-                            Berkman của Harvard cho biết rằng ông cho rằng phần lớn sự sụt giảm của số lượt xem trang là do Sơ đồ tri thức, nói rằng, "Nếu bạn có thể nhận được câu trả lời của mình từ w trang tìm kiếm, bạn sẽ kpedia.org Xếp hạng Alexa
-                            Giữ nguyên 10 (Toàn cầu, Tháng 1 năm 2018) Thương mại Không Yêu cầu đăng ký Tùy chọn[gc 1] Số người dùng >315.147 tài khoản hoạt động[note 1] và >85.634.144 tài khoản đã đăng ký 3.906 Quản trị viên (Bảo Quản Viên) Bắt đầu hoạt
-                            động 15 tháng 1 năm 2001; 20 năm trước Tình trạng hiện tại Đang hoạt động Giấy phép nội dung CC Attribution / Share-Alike 3.0. Đa số tài liều được cấp giấy phép kép dựa theo GFDL, giấy phép cho các tập tin phương tiện có thể
-                            khác. Viết bằng Nền tảng LAMP[3] Số OCLC 52075003 Wikipedia (/ˌwɪkɪˈpiːdiə/ (nghe) WIK-i-PEE-dee-ə hoặc /ˌwɪkiˈpiːdiə/ (nghe) WIK-ee-PEE-dee-ə) là một bách khoa toàn thư mở trực tuyến đa ngôn ngữ[4] được sáng lập và duy trì
-                            bởi một cộng đồng biên tập viên tình nguyện và chạy trên nền tảng wiki. Tính đến tháng 1 năm 2021, theo xếp hạng của Alexa, Wikipedia là một trong 15 trang web phổ biến nhất thế giới[5] còn tạp chí The Economist xếp Wikipedia
-                            là "địa điểm được truy cập nhiều thứ 13 trên web".[6] Wikipedia không chạy quảng cáo và do tổ chức phi lợi nhuận Wikimedia
+                            năm 2012.
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer -->
-    </div>
-    <footer>
-        <div class="row" id="footer">
-            <div class="col-md-4 col-xs-2  col-lg-4 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                <img class="logo-footer" src="../Home/Image/logo2.jpg" alt="logo-footer" data-at2x="Image/Logo2.jpg" width="60px">
-                <p class="content-footer">
-                    Cộng đồng những người đàn ông có cùng khao khát muốn trở thành phiên bản tốt nhất của bản thân, cung cấp kiến thức và cùng chia sẽ trên nhiều lĩnh vực.</p>
+            <!-- Footer -->
 
-            </div>
-            <div class="col-md-4 col-xs-2 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+            <footer>
+                <div class="row" id="footer">
+                    <div class="col-md-4 col-xs-2  col-lg-4 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <img class="logo-footer" src="Image/Logo2.jpg" alt="logo-footer" data-at2x="Image/Logo2.jpg" width="60px">
+                        <p class="content-footer">
+                            Cộng đồng những người đàn ông có cùng khao khát muốn trở thành phiên bản tốt nhất của bản thân, cung cấp kiến thức và cùng chia sẽ trên nhiều lĩnh vực.</p>
 
-                <h3>Liên lạc</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
-                <p><i class="fas fa-phone"></i> (+84) 829 970 447 </p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:tuan.nguyenit263@gmail.com">tuan.nguyenit263@gmail.com</a></p>
-            </div>
-            <div class="col-md-3 col-xs-2 col-xs-2 col-lg-2 footer-social wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                <h3>Theo dõi</h3>
-                <p>
-                    <a href="#"><i class="fab fa-facebook "></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g "></i></a>
-                    <a href="#"><i class="fab fa-instagram "></i></a>
-                    <a href="#"><i class="fab fa-pinterest "></i></a>
-                </p>
-            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-2 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+
+                        <h3>Liên lạc</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+                        <p><i class="fas fa-phone"></i> (+84) 829 970 447 </p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:tuan.nguyenit263@gmail.com">tuan.nguyenit263@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-3 col-xs-2 col-xs-2 col-lg-2 footer-social wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <h3>Theo dõi</h3>
+                        <p>
+                            <a href="#"><i class="fab fa-facebook "></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g "></i></a>
+                            <a href="#"><i class="fab fa-instagram "></i></a>
+                            <a href="#"><i class="fab fa-pinterest "></i></a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
 </body>
 
 </html>

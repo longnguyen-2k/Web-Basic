@@ -1,24 +1,24 @@
-function myPost(){
-    alert('Bài viết của bạn đã được đăng');
-    var a = {
-        textare1:  document.getElementById("mytextare1").value,
-        topic: document.getElementById("topic").value,
-        textare2:document.getElementById("mytextare2").value,
-        field:document.getElementById("image").value
-    }
-    Post.push(a);
-    console.log(a);
-    Save();
-}
-var Post = [];
-function Save() {
-    localStorage.setItem('listNewsPost', JSON.stringify(Post))
-    }
+window.onload = init();
 
-    function load() {
-        product = JSON.parse(localStorage.getItem('listNewsPost'));
-    
+function init() {
+    User.loadData();
+    News.loadData();
+    console.log(User.getListUser());
+    console.log(News.getListUser());
+}
+
+function myPost() {
+    alert('Bài eviết của bạn đã được đăng');
+    var a = {
+            textare1: document.getElementById("mytextare1").value,
+            userName: "",
+            topic: document.getElementById("topic").value,
+            textare2: document.getElementById("mytextare2").value,
+            img: document.getElementById("image").value,
+            like: '',
+            comments: '',
+            share: '',
         }
-        if (localStorage.getItem("listNewsPost") != null) {
-        load();
-        }
+        //  console.log(a);
+    News.createNew(a);
+}

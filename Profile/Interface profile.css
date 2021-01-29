@@ -156,7 +156,85 @@
 }
 
 
+/* Login and Logout */
+
+.modal-header .close {
+    padding: 20px 20px;
+}
+
+.modal-header ul {
+    border: none;
+}
+
+.modal-header ul li {
+    margin: 0;
+    text-align: center;
+}
+
+.modal-header ul li a {
+    border: none;
+    border-radius: 0;
+    color: rgb(175, 174, 174);
+}
+
+.modal-header ul li a:hover {
+    border: none;
+    color: #016d3b;
+}
+
+.modal-header ul li a span {
+    margin-right: 30px;
+}
+
+.modal-content {
+    margin-right: 5rem !important;
+    width: 24rem!important;
+}
+
+.nav-tabs {
+    justify-content: space-around;
+    width: 30rem !important;
+}
+
+.active-button a:hover {
+    text-decoration: none !important;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: #016d3b !important;
+}
+
+.checkbox label {
+    color: #016d3b !important;
+}
+
+.btn-default {
+    background-color: #016d3b !important;
+    color: white !important;
+}
+
+
+/* Modal input info */
+
+.btn-outline-danger {
+    border: #016d3b !important;
+    background: #016d3b !important;
+    color: #f9faf9 !important;
+}
+
+.modal-footer .btn-secondary {
+    background: #f9faf9 !important;
+    color: red !important;
+    border: red !important;
+}
+
+
 /* Content */
+
+.topic {
+    margin-left: 5%;
+}
 
 .image>img {
     display: block;
@@ -185,10 +263,6 @@
     color: black;
     padding: 8px 16px;
     text-decoration: none;
-}
-
-#mytextare1 {
-    margin-right: 5rem;
 }
 
 .col-md-3 {
@@ -345,15 +419,16 @@
     #footer h3 {
         font-size: 1rem;
     }
-    .content-footer {
-        display: none;
-    }
     .col-md-3 {
         display: none;
     }
     .footer-contact {
         font-size: 01.em;
     }
+}
+
+#topic {
+    margin-left: 65%;
 }
 
 
