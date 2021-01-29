@@ -49,7 +49,6 @@ for (i = 0; i <= users.length; i++) {
 };
 var input_data = function() {
     var account = {
-        id: id,
         newUsername: document.getElementById("newUsername").value,
         newPassword: document.getElementById("newPassword").value,
         newEmail: document.getElementById("newEmail").value,
@@ -60,7 +59,7 @@ var input_data = function() {
     }
     users.push(account);
     save();
-    callAPI("User", "POST", account).then(respone => {
+    callAPI(account.id, "POST", account).then(respone => {
         alert("Tạo tài khoản thành công!");
         window.location.replace("../Home/home.html");
     });

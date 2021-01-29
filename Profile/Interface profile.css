@@ -232,6 +232,11 @@
 
 /* Content */
 
+.col-sm-3 {
+    top: 8.2em;
+    bottom: auto;
+}
+
 .topic {
     margin-left: 5%;
 }
@@ -269,8 +274,13 @@
     padding-right: 0;
 }
 
+#mytextare2 {
+    height: 3rem !important;
+}
+
 .noidung {
-    text-align: justify;
+    width: 70%;
+    float: right;
 }
 
 .btn-outline-danger {
@@ -315,6 +325,7 @@
 /* Footer */
 
 #footer {
+    margin-top: 5rem;
     color: #f9faf9;
     width: 100%;
     height: 12em;
