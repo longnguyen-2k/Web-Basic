@@ -88,9 +88,10 @@ header {
     color: #aaa;
 }
 
-body{ font-size: 14px;
+body{ 
+     font-size: 14px;
      background-color: #e9ecef; list-style: 26px;
-    font-family: 'vertical-align', sans-serif; 
+     font-family: 'vertical-align', sans-serif; 
    
 }
 
