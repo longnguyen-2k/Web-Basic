@@ -232,9 +232,12 @@
 
 /* Content */
 
+.fa-pen {
+    margin-left: 20px;
+}
+
 .col-sm-3 {
-    top: 8.2em;
-    bottom: auto;
+    display: block !important;
 }
 
 .topic {
@@ -279,7 +282,7 @@
 }
 
 .noidung {
-    width: 70%;
+    width: 60%;
     float: right;
 }
 
