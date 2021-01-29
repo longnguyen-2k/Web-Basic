@@ -1,107 +1,66 @@
-const URL_API = "https://600ba4de38fd25001702ca61.mockapi.io/api/User";
-
-function callAPI(endpoint, method, body) {
-    return axios({
-        method: method,
-        url: `${URL_API}/${endpoint}`,
-        data: body,
-    }).
-    catch((err) => {
-        console.log(err);
-    });
-}
-
-var users = [{
-        newUsername: "Tuanhero",
-        newPassword: "2632001",
-        newEmail: "tuan.nguyenit263@gmail.com",
-        name: "Nguyen Anh Tuan",
-        age: "18",
-        phones: "0829970447",
-        job: "UX/UI designer",
-    },
-    {
-        newUsername: "Phonglong",
-        newPassword: "11111",
-        newEmail: "long.phong@gmail.com",
-        name: "Nguyen Dinh Long",
-        age: "18",
-        phones: "09740047",
-        job: "Back-end Developer",
-    },
-];
-
-function save() {
-    localStorage.setItem('user_local', JSON.stringify(users));
-}
-
-function load() {
-    users = JSON.parse(localStorage.getItem('user_local'));
-}
-
-if (localStorage.getItem("user_local") != null) {
-    load();
-}
-
-var id;
-for (i = 0; i <= users.length; i++) {
-    id = i;
-};
+User.loadData();
+var navigate = false;
 var input_data = function() {
-    var account = {
-        newUsername: document.getElementById("newUsername").value,
-        newPassword: document.getElementById("newPassword").value,
-        newEmail: document.getElementById("newEmail").value,
-        name: document.getElementById("name").value,
-        age: document.getElementById("age").value | 0,
-        phones: document.getElementById("phones").value,
-        job: document.getElementById("job").value,
+        var input = {
+            newUsername: document.getElementById("newUsername").value,
+            newPassword: document.getElementById("newPassword").value,
+            newEmail: document.getElementById("newEmail").value,
+            name: document.getElementById("name").value,
+            age: document.getElementById("age").value | 0,
+            phones: document.getElementById("phones").value,
+            job: document.getElementById("job").value,
+        }
+        console.log(account)
+        navigate = true;
+        if (navigate == true) {
+            var account = new User(input.newUsername, input.newPassword, input.newPassword, input.name, input.age, input.phones, input.job);
+            User.createUser(account);
+            setTimeout(() => { window.location.replace("../Home/home.html") }, 5000);
+
+        } else {
+            alert("Không thể thêm thông tin !")
+        }
     }
-    users.push(account);
-    save();
-    callAPI(account.id, "POST", account).then(respone => {
-        alert("Tạo tài khoản thành công!");
-        window.location.replace("../Home/home.html");
-    });
-
-
-}
-var check = 0;
+    // Kiem tra dang nhap
+var check;
 var checkLogin = function() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    for (var i in users) {
-        var data = JSON.parse(JSON.stringify(users[i]))
-        if (username == data.newUsername && password == data.newPassword) {
-            check++;
+    User.listUser;
+    for (var i in User.listUser) {
+        var data = User.listUser[i];
+        if (username == data.userName && password == data.passWord) {
+            check = 1;
+            break
         } else {
             check = 0;
         }
-        return check;
     }
+    return check;
 }
-
+console.log(check)
 var login = function() {
-    if (checkLogin() != 0) {
-        alert("Đăng nhập thành công!");
-        window.location.replace("../Home/home.html");
-    } else {
-        document.getElementById('errorText').innerHTML = "Tên đăng nhập hoặc mật khẩu sai!";
+        if (checkLogin() == 1) {
+            alert("Đăng nhập thành công!");
+            window.location.replace("../Home/home.html");
+        } else {
+            alert("Tên đăng nhập hoặc mật khẩu sai!");
 
+        }
     }
-}
-
-
+    // Kiem tra dang ky
 var checkSignUp;
 var checkSignup = function() {
     var newUsername = document.getElementById('newUsername').value;
     var newEmail = document.getElementById('newEmail').value;
     var newPassword = document.getElementById('newPassword').value;
     var rePass = document.getElementById('rePassword').value;
-    for (var i in users) {
-        var data = JSON.parse(JSON.stringify(users[i]))
-        if (newUsername == data.newUsername) {
+    User.listUser
+    for (var i in User.listUser) {
+        var data = User.listUser[i];
+        if (newUsername == data.userName) {
             checkSignUp = 1;
+            break;
         } else if (rePass != newPassword) {
             checkSignUp = 2;
         } else if (newUsername == "" || newPassword == "" || rePass == "" || newEmail == "") {
@@ -127,28 +86,3 @@ var signUP = function() {
 
     }
 }
-
-
-
-
-
-
-// var update = function(i) {
-//     var k = product[i];
-//     document.getElementById("idd").value = k.id;
-//     document.getElementById("named").value = k.name;
-//     document.getElementById("imged").value = k.img;
-//     document.getElementById("priced").value = k.price;
-//     document.getElementById("idd").setAttribute("disabled", "disabled");
-//     document.getElementById("submit").innerHTML = '<button class= "btn btn-outline-danger mt-3" onclick = "submit (' + i + ')"> Agree</button>'
-// }
-// var submit = function(i) {
-//     var k = product[i];
-//     k.id = document.getElementById("idd").value;
-//     k.name = document.getElementById("named").value;
-//     k.img = document.getElementById("imged").value;
-//     k.price = document.getElementById("priced").value;
-//     localStorage.setItem('listProduct', JSON.stringify(product));
-//     save();
-//     window.location.reload();
-// }

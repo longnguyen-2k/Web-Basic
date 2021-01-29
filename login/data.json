@@ -1,0 +1,69 @@
+{
+    "User": [{
+            "id": "42",
+            "userName": "long12",
+            "passWord": "123456",
+            "email": "aadsa@adas.com",
+            "name": "asdas",
+            "age": "",
+            "phone": "0912345678",
+            "job": "",
+            "listUser": []
+        },
+        {
+            "id": "43",
+            "userName": "Nguyen Tuan",
+            "passWord": "123456",
+            "email": "123456",
+            "name": "Nguyen Tuan",
+            "age": 123,
+            "phone": "0829970447",
+            "job": "IT",
+            "listUser": []
+        },
+        {
+            "id": "44",
+            "userName": "Nguyen Tuan",
+            "passWord": "123456",
+            "email": "123456",
+            "name": "Nguyen Tuan",
+            "age": 12,
+            "phone": "0829970447",
+            "job": "IT",
+            "listUser": []
+        },
+        {
+            "id": "45",
+            "userName": "tuanhero",
+            "passWord": "12345",
+            "email": "12345",
+            "name": "Nguyen Anh Tuan",
+            "age": 19,
+            "phone": "0829970447",
+            "job": "IT",
+            "listUser": []
+        },
+        {
+            "id": "46",
+            "userName": "tuan",
+            "passWord": "12345",
+            "email": "12345",
+            "name": "Nguyen Anh Tuan",
+            "age": 13,
+            "phone": "0829970447",
+            "job": "IT",
+            "listUser": []
+        },
+        {
+            "id": "47",
+            "userName": "tuanhero2",
+            "passWord": "12345",
+            "email": "12345",
+            "name": "Nguyen Anh Tuan",
+            "age": 18,
+            "phone": "0829970447",
+            "job": "IT",
+            "listUser": []
+        }
+    ]
+}

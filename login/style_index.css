@@ -20,8 +20,10 @@ h1 {
 }
 
 h2 {
+    font-size: 5rem !important;
     text-align: center;
-    color: #f9faf9 !important;
+    font-weight: bolder !important;
+    color: #016d3b!important;
 }
 
 p {
