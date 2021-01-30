@@ -28,3 +28,8 @@
  //node test.js is run file test.js
  // $ npm install axios --save
  
+
+//  window.axios =  request('axios');
+
+
+  

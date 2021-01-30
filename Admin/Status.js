@@ -19,7 +19,7 @@ function setStatus(){
 }
 
 function login(){
-    setTimeout(()=> {console.log(User.getUserID(5) )},5000);
+    // setTimeout(()=> {console.log(User.getUserID(5) )},5000);
 setStatus();  
 }
 
