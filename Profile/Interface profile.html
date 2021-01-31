@@ -3,8 +3,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Interface profile.css">
-    <script src="../Admin/index.js"></script>
-    <script src="../Admin/Data.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../login/Data_login.js"></script>
+
+    <script src="./dataProfile.js"></script>
+    <script src="./update.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -91,7 +94,7 @@
         <!-- Content -->
         <div class="container pt-3" style="background-color:#f9faf9">
             <div class="row text-center pt-3">
-                <div class="col-sm-3" style="height:auto;width: auto; background-color:#f9faf9; position: fixed;margin-right:50%;">
+                <div class="col-sm-3" style="height:auto;width: auto; position: fixed ;background-color:#f9faf9;margin-right:50%;">
                     <div class="hinhanh text-center">
                         <div class="image" id="image">
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJR3JePO3pQMweQtMs-YIg5OU_uDFEoIlIMA&usqp=CAU' class="rounded-circle" alt="My Idol" width="150" height="150" style="text-align: center;"><br>
@@ -104,179 +107,165 @@
                         <ul class="navbar-nav mr-5 mx-auto  ">
 
                             <li class="nav-item ">
-                                <a class="nav-link" data-toggle="modal" data-target="#dialog1" href="#">Chỉnh sửa tiểu sử</a>
+                                <button class="nav-link-button" onclick="update()" data-toggle="modal" data-target="#dialog1">Chỉnh sửa tiểu sử</button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="modal" data-target="#changepass" href="#">Mật khẩu</a>
+                                <button onclick="upPassWord()" class="nav-link-button" data-toggle="modal" data-target="#changepass">Mật khẩu</button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="modal" data-target="#changeemail" href="#">Email</a>
+                                <button class="nav-link-button" data-toggle="modal" data-target="#changeemail">Email</button>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Thông báo</a>
+                                <button class="nav-link-button">Thông báo</button>
                             </li>
 
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Bảo vệ</a>
+                                <button class="nav-link-button">Bảo vệ</button>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <!-- Gọi lại modal -->
-            <div class="modal fade" id="dialog1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-
-                            <h5 class="modal-title">Chỉnh sửa thông tin cá nhân</h5>
-                            <i class="fas fa-pen"></i>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                     </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" class="form-row">
-                                <div class="col-12 mt-2">
-                                    <input class="form-control" type="text" id="fullname" placeholder="Họ và tên">
-                                </div>
-
-                                <div class="col-12 mt-2">
-                                    <input class="form-control" type="text" id="profile" placeholder="Tiểu sử">
-                                </div>
-
-                                <div class="col-12 mt-2">
-                                    <input class="form-control" type="number" id="age" placeholder="Tuổi">
-                                </div>
-
-                                <div class="col-12 mt-2">
-                                    <input class="form-control" type="number" id="phone" placeholder="Điện thoại">
-                                </div>
-
-                                <div class="col-12 mt-2">
-                                    <input class="form-control" type="number" id="job" placeholder="Công việc">
-                                </div>
-                                <a class="btn btn-outline-danger mt-3 button" href="" onclick="Chinhsua()">Đồng ý</a>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="changepass" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5 class="modal-title">Thay đổi mật khẩu</h5>
-                            <i class="fas fa-pen"></i>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" class="form-row">
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="text" id="passwword" placeholder="Mật khẩu ban đầu">
-                                </div>
-
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="text" id="newPasswword" placeholder="Mật khẩu mới">
-                                </div>
-
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="number" id="confirmPassword" placeholder="Xác nhận mật khẩu mới">
-                                </div>
-
-                                <a class="btn btn-outline-danger mt-3" style=" background-color: #016D3B;" href="" onclick="Chinhsua()">Đồng ý</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="changeemail" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5 class="modal-title">Thay đổi email</h5>
-                            <i class="fas fa-pen"></i>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                        </div>
-
-                        <div class="modal-body">
-                            <form action="" class="form-row">
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="text" id="firstName" placeholder="Tên">
-                                </div>
-
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="text" id="lastName" placeholder="Họ">
-                                </div>
-
-                                <div class="col-12 mt-4">
-                                    <input class="form-control" type="text" id="newEmail" placeholder="Nhập email mới">
-                                </div>
-
-                                <a class="btn btn-outline-danger mt-3" style=" background-color: #016D3B;" href="" onclick="Change()">Đồng ý</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-9" style="margin-left:25%">
-                <div class="Post">
-                    <textarea style="width:80%; height:5%;margin-left:15%" data-toggle="modal" data-target="#exampleModal" class="form-control" id="mytextare2" placeholder="Cập nhật bài viết của bạn"></textarea><br>
-                    <div class="modal fade" id="exampleModal" role="doc-exampleModal" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-
-                                <div class="modal-header">
-                                    <h5 class="modal-title"></h5>
-                                    <p>Đăng bài viết mới</p><br>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </div>
+        <!-- Cập nhận thông tin -->
+        <div class="modal fade" id="dialog1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Chỉnh sửa thông tin cá nhân</h5>
+                        <i class="fas fa-pen"></i>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </button>
-                                </div>
-
-                                <div class="modal-body">
-                                    <textarea class="form-control" id="mytextare1" placeholder="Tiêu đề"></textarea>
-                                    <select name="Chọn chủ đề" id="topic">
-                                        <option disabled selected hidden >Chọn chủ đề</option>
-                                        <option value="Cuocsong">Cuộc sống</option>
-                                        <option value="Tinhyeu">Tình yêu</option>
-                                        <option value="Thoitrang">Thời trang</option>
-                                        <option value="Congnghe">Công nghệ</option>
-                                        <option value="Sach">Sách</option>
-                                        </select>
-                                    <textarea rows="3" cols="20" class="form-control" id="mytextare2" placeholder="Cập nhật bài viết của bạn"></textarea>
-
-                                    <div class="d-inline-block">
-                                        <i class="fas fa-images fa-2x" style="color:#016d3b"></i>
-                                        <input type="file">
-                                    </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Đóng</button>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:	#008000">Lưu lại</button>
-                                </div>
-
+                                 </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                            <div class="col-12 mt-2">
+                                <input class="form-control" type="text" id="fullname" placeholder="Họ và tên">
                             </div>
-                        </div>
-                        <div>
-                        </div>
+                            <div class="col-12 mt-2">
+                                <input class="form-control" type="number" id="age" placeholder="Tuổi">
+                            </div>
+                            <div class="col-12 mt-2">
+                                <input class="form-control" type="number" id="phone" placeholder="Điện thoại">
+                            </div>
+                            <div class="col-12 mt-2">
+                                <input class="form-control" type="text" id="job" placeholder="Công việc">
+                            </div>
 
+                        </form>
+                        <div id="submit">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="changePass" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thay đổi mật khẩu</h5>
+                        <i class="fas fa-pen"></i>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="text" id="password" placeholder="Mật khẩu cũ">
+                            </div>
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="text" id="newPassword" placeholder="Mật khẩu mới">
+                            </div>
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="number" id="confirmPassword" placeholder="Xác nhận mật khẩu mới">
+                            </div>
+                        </form>
+                        <div id="chinhSua"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="changeEmail" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thay đổi Email</h5>
+                        <i class="fas fa-pen"></i>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="text" id="firstName" placeholder="Tên">
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="text" id="lastName" placeholder="Họ">
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <input class="form-control" type="text" id="newEmail" placeholder="Nhập email mới">
+                            </div>
+
+                            <a class="btn btn-outline-danger mt-3" style=" background-color: #016D3B;" href="" onclick="Change()">Đồng ý</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9" style="margin-left:25%">
+            <div class="Post">
+                <textarea style="width:80%; height:5%;margin-left:15%" data-toggle="modal" data-target="#exampleModal" class="form-control" id="mytextare2" placeholder="Cập nhật bài viết của bạn"></textarea><br>
+                <div class="modal fade" id="exampleModal" role="doc-exampleModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title"></h5>
+                                <p>Đăng bài viết mới</p><br>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <textarea class="form-control" id="mytextare1" placeholder="Tiêu đề"></textarea>
+                                <select name="Chọn chủ đề" id="topic">
+                                    <option disabled selected hidden >Chọn chủ đề</option>
+                                    <option value="Cuocsong">Cuộc sống</option>
+                                    <option value="Tinhyeu">Tình yêu</option>
+                                    <option value="Thoitrang">Thời trang</option>
+                                    <option value="Congnghe">Công nghệ</option>
+                                    <option value="Sach">Sách</option>
+                                    </select>
+                                <textarea rows="3" cols="20" class="form-control" id="mytextare2" placeholder="Cập nhật bài viết của bạn"></textarea>
+
+                                <div class="d-inline-block">
+                                    <i class="fas fa-images fa-2x" style="color:#016d3b"></i>
+                                    <input type="file">
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-outline-danger" style="background-color:	#008000">Lưu lại</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
                     </div>
 
                 </div>
+
             </div>
         </div>
         <!-- Div chia hàng -->

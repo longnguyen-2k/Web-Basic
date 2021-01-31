@@ -15,6 +15,8 @@ var input_data = function() {
         if (navigate == true) {
             var account = new User(input.newUsername, input.newPassword, input.newPassword, input.name, input.age, input.phones, input.job);
             User.createUser(account);
+            setStatus();
+            localStorage.setItem('user', JSON.stringify(account));
             setTimeout(() => { window.location.replace("../Home/home.html") }, 5000);
 
         } else {
@@ -26,10 +28,12 @@ var check;
 var checkLogin = function() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    User.listUser;
-    for (var i in User.listUser) {
-        var data = User.listUser[i];
+    var listUser = User.getListUser();
+    for (var i in listUser) {
+        var data = listUser[i];
         if (username == data.userName && password == data.passWord) {
+            localStorage.setItem('user', JSON.stringify(data));
+
             check = 1;
             break
         } else {
@@ -42,6 +46,9 @@ console.log(check)
 var login = function() {
         if (checkLogin() == 1) {
             alert("Đăng nhập thành công!");
+
+            setStatus();
+
             window.location.replace("../Home/home.html");
         } else {
             alert("Tên đăng nhập hoặc mật khẩu sai!");
@@ -80,9 +87,35 @@ var signUP = function() {
     } else if (checkSignup() == 3) {
         alert("Thông tin không được để trống!");
     } else {
+
         alert("Đăng ký tài khoản thành công !");
         console.log(checkSignup())
         $('#exModal').modal('show');
 
     }
+}
+
+
+var status = false;
+
+localStorage.setItem('status', JSON.stringify(false));
+
+
+function getStatus() {
+    return JSON.parse(localStorage.getItem('status'));
+}
+
+
+function setStatus() {
+
+    if (JSON.parse(localStorage.getItem('status'))) {
+        localStorage.setItem('status', 'false');
+    } else {
+        localStorage.setItem('status', 'true');
+    }
+}
+
+function isLogin() {
+    setTimeout(() => { console.log(localStorage.getItem('user')) }, 5000);
+    console.log(getStatus());
 }

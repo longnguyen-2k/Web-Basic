@@ -1,7 +1,6 @@
 const URL_API_User = "https://600ba4de38fd25001702ca61.mockapi.io/api/User";
-
+listUser = [];
 class User {
-    listUser = [];
 
     constructor(userName, passWord, email, name, age, phone, job) {
         if (this.listUser.length == 0 || this.listUser == null) {
@@ -21,7 +20,7 @@ class User {
 
 
     static getUserID(id) {
-        var user = this.listUser.filter((value) => {
+        var user = listUser.filter((value) => {
             return value.id == id
         });
         return user[0];
@@ -29,7 +28,7 @@ class User {
 
 
     static getListUser() {
-        return this.listUser;
+        return listUser;
     }
     getUser() {
         return this;
@@ -83,14 +82,7 @@ class User {
     }
 
     static loadData() {
-        User.callAPI('', "GET", null).then((res) => { this.listUser = res.data; });
-    }
-
-    static editUserByID(id, body) {
-
-        User.callAPI(id, "PUT", body).then((res) => { alert("Cập nhật thành công") });
-        this.listUser.splice(parseInt(id), 1, User.callAPI(id, "GET", null));
-
+        User.callAPI('', "GET", null).then((res) => { listUser = res.data; });
     }
 
     static createUser(body) {
@@ -99,6 +91,16 @@ class User {
             console.log(respone.data);
             alert("Thêm thông tin thành công")
         });
-        User.listUser.push(body);
+        listUser.push(body);
     }
+
+
+    static editUserByID(id, body) {
+
+        User.callAPI(id, "PUT", body).then((res) => { alert("Cập nhật thành công") });
+        User.callAPI('', "GET", null);
+
+    }
+
+
 }
