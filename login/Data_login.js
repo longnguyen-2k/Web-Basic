@@ -3,10 +3,10 @@ listUser = [];
 class User {
 
     constructor(userName, passWord, email, name, age, phone, job) {
-        if (this.listUser.length == 0 || this.listUser == null) {
+        if (listUser.length == 0 || listUser == null) {
             this.id = 1;
         } else {
-            this.id = this.listUser[this.listUser.length - 1].id;
+            this.id = listUser[listUser.length - 1].id;
         }
         this.userName = userName;
         this.passWord = passWord;

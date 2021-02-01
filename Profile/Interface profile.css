@@ -250,6 +250,22 @@
     border-bottom: none;
 }
 
+.nav-link-button {
+    border: none;
+    background-color: white;
+}
+
+
+/* Di chuyển chuột */
+
+.nav-item button:hover {
+    background-color: #016D3B;
+    transform: translate3d(0px, 0px, 0px) !important;
+    /* color: #016d3b !important; */
+    width: 14rem !important;
+    color: white;
+}
+
 
 /* Footer */
 

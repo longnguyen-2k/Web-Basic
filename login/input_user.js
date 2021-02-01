@@ -33,23 +33,28 @@ var checkLogin = function() {
         var data = listUser[i];
         if (username == data.userName && password == data.passWord) {
             localStorage.setItem('user', JSON.stringify(data));
-
             check = 1;
-            break
+            break;
+        } else if (username == "Admin" && password == "12345") {
+            localStorage.setItem('user', JSON.stringify(data));
+            check = 2;
+            break;
         } else {
             check = 0;
         }
     }
+    console.log(check)
     return check;
 }
-console.log(check)
 var login = function() {
         if (checkLogin() == 1) {
             alert("Đăng nhập thành công!");
-
             setStatus();
-
             window.location.replace("../Home/home.html");
+        } else if (checkLogin() == 2) {
+            setStatus();
+            alert("Xin chào Admin!");
+            window.location.replace("../Admin/index.html");
         } else {
             alert("Tên đăng nhập hoặc mật khẩu sai!");
 
@@ -62,9 +67,9 @@ var checkSignup = function() {
     var newEmail = document.getElementById('newEmail').value;
     var newPassword = document.getElementById('newPassword').value;
     var rePass = document.getElementById('rePassword').value;
-    User.listUser
-    for (var i in User.listUser) {
-        var data = User.listUser[i];
+    listUser = User.getListUser();
+    for (var i in listUser) {
+        var data = listUser[i];
         if (newUsername == data.userName) {
             checkSignUp = 1;
             break;
@@ -97,14 +102,11 @@ var signUP = function() {
 
 
 var status = false;
-
 localStorage.setItem('status', JSON.stringify(false));
-
 
 function getStatus() {
     return JSON.parse(localStorage.getItem('status'));
 }
-
 
 function setStatus() {
 
