@@ -1,0 +1,31 @@
+.dropdown {
+    margin: auto;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+.Post_News {
+    margin: auto;
+    text-align: center;
+}
+
+#topic {
+    margin-left: 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.modal-footer button {
+    border-radius: 10%;
+}
+
+.modal-footer button:hover {
+    background-color: #016d3b;
+}
+
+.fa-pen {
+    margin-left: 20px;
+}
