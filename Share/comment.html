@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="comment.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class ="row">
+                <div class="col-sm-4">
+                    <button aria-expanded="false" data-toggle="collapse" data-target="">
+                        <a href="#" class="likeCount">
+                            <i class="fa fa-heart" style="color: #016d3b;"></i> 
+                            <span class="click_icon"><a id="clickss"></span>
+                        </a>
+                    </button>
+                </div>
+
+                <div class="col-sm-4">
+                    <button aria-expanded="false"
+                    data-toggle="collapse" data-target="#top"><i class="fa fa-comments" style="color: #016d3b;"></i></button>
+                    <div id="list"></div>
+                    <div class="collapse mt-6" id="top">
+                        <textarea placeholder="Chia sẻ cảm nghĩ của bạn..."></textarea>        
+                        <p id="enter">Nhấn Enter để bình luận</p>        
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <button aria-expanded="false"
+                    data-toggle="collapse" data-target=""> <i id="share" class="fa fa-share-alt" style="color: #016d3b;"></i></button>
+                </div>
+            </div>
+            
+            <script src="Data.js"></script>
+            <script src="comment.js"></script>
+            
+
+        </div>
+        
+    </body>
+</html>
