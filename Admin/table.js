@@ -122,7 +122,9 @@ function data_table_news(status) {
       <td>  ${element.subject}  </td>
       <td>  ${element.content}  </td>
       <td> ${element.deletedDate}  </td>
-      <td><button type="button" class="btn btn-primary" onclick='News.Restore( ${element.id})'>Restore</button> </td>
+      <td><button type="button" class="btn btn-primary" onclick='News.Restore( ${element.id})'>Restore</button> 
+      <button type="button" class="btn btn-danger" onclick='News.deleteBin( ${element.id})'>Delete</button>
+      </td>
      </tr>
      `}
     }
@@ -188,7 +190,8 @@ function data_table_user(status) {
     <td>  ${element.phone}  </td>
     <td> ${element.job}  </td>
     <td> ${element.deletedDate}</td>
-    <td><button type="button" class="btn btn-primary" onclick='User.Restore( ${element.id})'>Restore</button> </td>
+    <td><button type="button" class="btn btn-primary" onclick='User.Restore( ${element.id})'>Restore</button> 
+    <button type="button" class="btn btn-danger" onclick='User.deleteBin( ${element.id})'>Delete</button></td>
      </tr> `
     }}
   });

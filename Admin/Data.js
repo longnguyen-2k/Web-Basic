@@ -49,6 +49,7 @@ class User {
     return this;
   }
 
+
   static validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -115,11 +116,15 @@ class User {
   
 
   static restoreAll(){
-    listUser.array.forEach(element => {
-      if(element.status==false){
-        element.status=true;
-      }
-    });
+    if(confirm("Ban muon khoi phuc tat ca khong")){
+      listUser.forEach(element => {
+        if(element.status==false){
+          element.status=true;  } });
+       
+  
+    }
+    alert("Tat ca da duoc khoi phuc");
+    _('tbody_user').innerHTML=data_table_user(false);
   }
 
   static createUser(body){
@@ -130,17 +135,23 @@ class User {
   }
   static DeleteUserById(id) {
     if(confirm("Ban co chac la muon xoa khong")){
-      var deletaUser= this.getUserID(id);
-      deletaUser.deletedDate=new Date();
-      deletaUser.status=false;
-        listUser= listUser.filter(value=> {
-          return value.id!=deletaUser.id;
-        });
+      var deleteUser= this.getUserID(id);
+      deleteUser.deletedDate=new Date();
+      deleteUser.status=false;
+      
       // console.log(this.getUserID(id))
-     // User.callAPI(id, "DELETE", null);
+      User.callAPI(id, "DELETE", null);
       setTimeout(()=>{ _('tbody_user').innerHTML=data_table_user(true);},100);
    
     }
+  }
+  static deleteBin(id){
+    var user= User.getUserID(id);
+    listUser= listUser.filter(value=> {
+      return value.id!=user.id;
+    });
+    User.callAPI(id, "DELETE", null);
+    _('tbody_user').innerHTML=data_table_user(false);
   }
   static Restore(id){
     var user= User.getUserID(id);
@@ -294,7 +305,14 @@ class News{
   
   }
 
-
+  static deleteBin(id){
+    var news= News.getNewByID(id);
+    listNews= listNews.filter(value=> {
+      return value.id!=news.id;
+    });
+    News.callAPI(id, "DELETE", null);
+    _('tbody_news').innerHTML=data_table_news(false);
+  }
 
   static Restore(id){
     var news=this.getNewByID(id);
@@ -303,12 +321,16 @@ class News{
      // News.callAPI(id,"PUT",news);
   }
   static restoreAll(){
+    if(confirm("Ban muon khoi phuc tat ca khong")){
     listNews.forEach(element => {
       if(element.status==false){
-        element.status=true;
-      }
-    });
+        element.status=true;  } });
+     
+
   }
+  alert("Tat ca da duoc khoi phuc");
+  _('tbody_news').innerHTML=data_table_news(false);
+}
 }
 
 // addNew(id){
