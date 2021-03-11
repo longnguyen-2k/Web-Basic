@@ -1,6 +1,6 @@
 
 
- window.onload =init();
+ window.onload =init;
 function init() {// chuan bi du lieu
     User.loadData();
    // News.loadData();

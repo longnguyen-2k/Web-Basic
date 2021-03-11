@@ -1,9 +1,9 @@
 
 
-const URL_API_User = "https://600ba4de38fd25001702ca61.mockapi.io/api/User";
+const URL_API_User = "http://localhost:3000/users";
 
-const URL_API_News_Mock = "https://600ba4de38fd25001702ca61.mockapi.io/api/News";
-const URL_ARI_News_Json="http://localhost:3000/News";
+//const URL_API_News_Mock = "https://600ba4de38fd25001702ca61.mockapi.io/api/News";
+const URL_ARI_News_Json="http://localhost:3000/news";
 
 
 
@@ -101,7 +101,7 @@ class User {
   }
 
   static loadData() {
-    User.callAPI('', "GET", null).then((res) => { listUser = res.data;  });
+    User.callAPI("", "GET", null).then((res) => { listUser = res.data;  });
   }
 
   static editUserByID(id, body) {
@@ -240,7 +240,7 @@ class News{
   static callAPI(endpoint, method, body) {
     return axios({
       method: method,
-      url: `${URL_ARI_News_Json}/${endpoint}/`,
+      url: `${URL_ARI_News_Json}/${endpoint}`,
       data: body,
     }).
       catch((err) => {
